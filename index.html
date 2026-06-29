@@ -6,14 +6,31 @@
 </head>
 
 <body style="font-family: Arial; max-width: 700px; margin: 60px auto; line-height: 1.6;">
-  
+   <section class="sub-header">
+        <nav>
+          <a href="index.html"><img src="images/logo.png"></a>
+          <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="journal.html">Journal</a></li>
+              <li><a href="reading.html">Reading</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+
+            </ul>
+          </div>
+          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+      </section>
+
   <h1>daphneinyoga</h1>
 
   <p><em>Seeing life as an opportunity to explore, experience and discover what it means to be fully alive. <br>
 The body and mind are part of that journey; <br>
 yoga is the practice of observing their movements with awareness,<br>
 rather than becoming identified with them.</em></p>
-
   <hr>
 
   <h2>
@@ -29,12 +46,27 @@ The practice is not confined to the mat. It unfolds in every moment of life: in 
   </ul>
 
 <!-----footer----->
-<section class="footer">
-     <div class="icons">
-      <a href="https://www.instagram.com/daphneinyoga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-           <p> © daphneinyoga</p>
-</section>
+<a href="https://www.instagram.com/daphneinyoga/" target="_blank"
+   style="
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     width: 40px;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #666;
+     text-decoration: none;
+     z-index: 999;
+   ">
+
+  <!-- Instagram Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 13 5.51 5.51 0 0 0 12 7.5zm0 2A3.5 3.5 0 1 1 8.5 13 3.5 3.5 0 0 1 12 9.5zM18 6.8a1.2 1.2 0 1 0 1.2 1.2A1.2 1.2 0 0 0 18 6.8z"/>
+  </svg>
+
+</a>
 
 
 </body>
