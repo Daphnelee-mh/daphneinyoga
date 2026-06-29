@@ -1,0 +1,42 @@
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO IMAGE */
+.hero {
+  position: relative;
+  height: 90vh;
+  background-image: url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 60px;
+  color: white;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* TEXT ON TOP */
+.hero-text {
+  position: relative;
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+</style>
