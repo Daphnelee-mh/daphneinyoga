@@ -1,9 +1,10 @@
-*{
+/* Reset default spacing */
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-
+    font-family: Arial, sans-serif;
 }
+
  background: rgba(250, 248, 245, 0.9);
 backdrop-filter: blur(12px);
 
