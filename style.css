@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+@media (max-width: 768px) {
 .hero-image {
 
   background-image: linear-gradient(
@@ -12,14 +12,17 @@ body, html {
     ),
     url("assets/images/herobanner.jpeg");
 
-  height: 30vh;
+  margin-top: 50px;
+  height: 70vh;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   position: relative;
-}
+  
+  }
+
 
 .hero-text {
   text-align: center;
@@ -28,4 +31,6 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+    width: 90%;
+    font-size: 14px;
 }
