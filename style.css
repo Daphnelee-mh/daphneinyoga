@@ -3,34 +3,64 @@ body, html {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 768px) {
+
+/* -------------------------
+   BASE (desktop + default)
+-------------------------- */
+
 .hero-image {
+  margin-top: 60px;
 
   background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
     ),
     url("assets/images/herobanner.jpeg");
 
-  margin-top: 50px;
-  height: 70vh;
+  height: 30vh;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   position: relative;
-  
-  }
-
+}
 
 .hero-text {
   text-align: center;
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   color: white;
+
+  width: 80%;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   MOBILE ONLY
+-------------------------- */
+
+@media (max-width: 768px) {
+
+  .hero-image {
+    margin-top: 50px;
+    height: 70vh;
+
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("assets/images/herobanner.jpeg");
+  }
+
+  .hero-text {
     width: 90%;
     font-size: 14px;
+    line-height: 1.5;
+  }
 }
