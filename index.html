@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>daphneinyoga</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<html>
 
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>daphneinyoga</title>
+        <link rel="stylesheet"  type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f83bac2574.js" crossorigin="anonymous"></script>
 
-  <h3>daphneinyoga</h3>
-<div class="hero-image">
-  <div class="hero-text">
-   <p>
+    
+    </head>
+   
+    <body>
+      <section class="header">
+        <nav>
+          <a href="index.html"><img src="images/logo.png"></a>
+          <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="reading.html">Reading</a></li>
+              <li><a href="about.html">About</a></li>
+
+            </ul>
+          </div>
+          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+          <h3>daphneinyoga</h3>         
+ <p>
     <em>
       Seeing life as an opportunity to explore, experience and discover what it means to be fully alive.
       <br><br>
@@ -21,22 +41,73 @@
       rather than becoming identified with them.<br><br>
       Yoga is happening in every moment of life. The practice is learning to recognize it.<br>
     </em>
-  </p>
-  </div>
-</div>
+  </p>          <a href="https://www.instagram.com/daphneinyoga/" target="_blank" class="hero-btn" >Find me here</a>
+          
 
+        </div>
+      </section>
+<!-----JavaScript for Toggle Menu---->
+      <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+          navLinks.style.right="0";
+        } 
+        function hideMenu(){
+          navLinks.style.right="-200px";
+        } 
+      </script>
 
-  <hr>
-
-  <h2>Hello, I'm Daphne.</h2>
+<!-----Intro----->
+       <h2>Hello, I'm Daphne.</h2>
 
   <p>Coming soon.</p>
 
   <a href="https://daphneinyoga.notion.site/daphneinyoga-6d6512f87da282ad8ba78124bf845bb4" target="_blank">
     Click here to read now
   </a>
+ 
+  <!-----Books----->
+  <section class="reading">
+    <a href="reading.html"><h1 id="reading">Art of Seeing<h1></a>
+      <div class="row">
+        <div class="reading-col">
+          <img src="images/yogasutrasofpatanjali.jpeg" alt="">
+          <div class="layer">
+            <a href="reading.html"><h4>Yoga Sutras of Pantajali<h4></a>
+          </div>
+          </div>
+        <div class="reading-col">
+        <img src="images/yamaandniyama.jpg" alt="">
+        <div class="layer">
+          <a href="reading.html"><h4>Yama and niyama<h4></a>
+          </div>
+          </div>
+        <div class="reading-col">
+          <img src="images/insidetheyogasutras.jpeg" alt="">
+          <div class="layer">
+            <a href="reading.html"><h4>Inside the Yoga Sutras<h4></a>
+            </div>
+        </div>
+        <div class="reading-col">
+          <img src="images/bhagavadgita.jpg" alt="">
+          <div class="layer">
+            <a href="reading.html"><h4>Bhagavad Gita<h4></a>
+            </div>
+        </div>
+      </div>
+  </section>
 
 
+<!-----footer----->
+    <section class="footer">
+      <h4>About me<h4>
+        <p>Hi, I am Daphne. <br>I believe life is meant to be experienced—through movement, stillness, curiosity, and mindful living. This is where I share my yoga journey and reflections along the way.</p>
+        <div class="icons">
+          <a href="https://www.instagram.com/daphneinyoga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+               <p> © daphneinyoga / ALL RIGHTS RESERVED. </p>
+    </section>
 
-</body>
+    </body>
 </html>
+
