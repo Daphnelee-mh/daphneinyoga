@@ -160,13 +160,13 @@ p{
     flex-direction:column;
   }}
 
-.product{
+.reading{
   width:80%;
   margin:auto;
   text-align:center;
   padding-top:50px;
 }
-.product-col{
+.reading-col{
   flex-basis:24%;
   background:#fff3f3;
   border-radius:10px;
@@ -174,12 +174,12 @@ p{
   position:relative;
   overflow:hidden;
 }
-.product-col img{
+.reading-col img{
   width:110%;
   height:100%;
 }
 
-.product a{
+.reading a{
   text-decoration:none;
   color:black;
 }
