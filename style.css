@@ -13,11 +13,8 @@
   position:relative;
 }
 .about-header{
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    url(assets/images/kaa2025writing.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)),url(assets/images/kaa2025writing.jpg);
+  background-position: center;
 }
 nav{
   display:flex;
