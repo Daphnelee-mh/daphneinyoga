@@ -5,7 +5,7 @@
 
 }
 .header{
-  min-height:100vh;
+  min-height:80vh;
   width:100%;
   background-image:linear-gradient(rgba(188,236,172,0.5),rgba(188,236,172,0.5)),url(herobanner.jpeg);
   background-position: center;
