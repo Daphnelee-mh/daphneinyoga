@@ -7,7 +7,7 @@
 .header{
   min-height:80vh;
   width:100%;
-  background-image:linear-gradient(rgba(178, 172, 136,0.5),rgba(178, 172, 136,0.5)),url(herobanner.jpeg);
+  background-image:linear-gradient(rgba(255, 255, 255,0.5),rgba(255, 255, 255,0.5)),url(assets/images/eagle.jpeg);
   background-position: center;
   background-size: cover;
   position:relative;
