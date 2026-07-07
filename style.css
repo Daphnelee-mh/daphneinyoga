@@ -12,6 +12,13 @@
   background-size: cover;
   position:relative;
 }
+.about-header{
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url(assets/images/kaa2025writing.jpg);
+}
 nav{
   display:flex;
   padding: 1% 3%;
