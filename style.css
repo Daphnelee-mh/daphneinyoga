@@ -65,6 +65,7 @@ nav img{
 .dropdown{
     display:none;
     position:relative;
+    margin-left:auto;
 }
 
 /* Menu button */
@@ -146,6 +147,7 @@ nav img{
 
     .dropdown{
         display:block;
+        margin-left:auto;
     }
 
     nav{
