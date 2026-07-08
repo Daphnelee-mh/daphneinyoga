@@ -208,7 +208,12 @@ p{
   .row{
     flex-direction:column;
   }}
-
+.quote{
+  width:80%;
+  margin:auto;
+  text-align:center;
+  padding-top:50px;
+}
 .reading{
   width:80%;
   margin:auto;
