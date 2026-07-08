@@ -15,20 +15,32 @@
     <body>
       <section class="header about-header">
 
-        <nav>
-          <a href="index.html"><img src=""></a>
-          <div class="nav-links" id="navLinks">
-            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="reading.html">Reading</a></li>
-              <li><a href="about.html">About</a></li>
+      <nav>
+     <!-- Desktop menu -->
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="reading.html">Reading</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
 
-            </ul>
-          </div>
-          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        </nav>
+
+    <!-- Mobile menu -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">
+            ☰
+        </button>
+        <div class="dropdown-content" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="reading.html">Reading</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+</nav>
         <div class="text-box">
           <h3>Hi, I am Daphne</h3><br>        
  <h4>
