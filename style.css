@@ -286,27 +286,27 @@ p{
   color:#fff;
 }
 
-/*---------------our products page ---------------*/
-.material{
+/*---------------reading page ---------------*/
+.content{
   width:80%;
   margin:auto;
   padding-top:50px;
   padding-bottom:50px
 }
 
-.material-col{
+.content-col{
   flex-basis:48%;
   padding: 30px 2px;
 }
 
-.material-col img{
+.content-col img{
   width:100%;
 }
-.material-col h1{
+.content-col h1{
   padding-top:0;
 }
 
-.material-col p{
+.content-col p{
   padding: 15px 0 25px;
 }
 
