@@ -24,13 +24,17 @@
 }
 nav{
   display:flex;
-  padding: 1% 3%;
-  justify-content: space-between;
-  align-items: center;
-    position:relative;
-    z-index:1000;
+  padding: 15px 3%;
+  justify-content:space-between;
+  align-items:center;
 
-} 
+  position:fixed;
+  top:0;
+  left:0;
+  width:94%;
+
+  z-index:1000;
+}
 nav img{
   width:300px; 
   display:inline-block;
@@ -39,9 +43,8 @@ nav img{
 
 }
 .nav-links{
-  flex:1;
-  text-align: right;
- display:block;
+  margin-left:auto;
+  display:block;
 }
 .nav-links ul li{
   list-style: none;
