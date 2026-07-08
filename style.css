@@ -16,6 +16,12 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(assets/images/kaa2025writing.jpg);
   background-position: center;
 }
+.logo{
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:500;
+}
 nav{
   display:flex;
   padding: 1% 3%;
