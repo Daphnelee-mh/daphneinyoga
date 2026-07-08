@@ -123,7 +123,22 @@ The book opens a doorway into exploring each sutra more deeply, uncovering the m
                 </div>
                <p> ©daphneinyoga</p>
     </section>
+<!-----JavaScript for Drop Menu---->
+        <script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
 
+// Close menu when clicking anywhere else
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.classList.contains("show")) {
+            menu.classList.remove("show");
+        }
+    }
+}
+</script>
     </body>
 </html>
 
