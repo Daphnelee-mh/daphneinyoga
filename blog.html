@@ -50,5 +50,34 @@
   </p>    
           
 
-        </div>
+      </div>
       </section>
+    <!-----footer----->
+    <section class="footer">
+        <h4>About me</h4>
+        <p>Hi, I am Daphne. <br>I believe we become by being — through presence, awareness, and the journey of simply becoming ourselves.</p>
+        <div class="icons">
+        <a href="https://www.instagram.com/daphneinyoga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@daphneinyoga" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+               <p> ©daphneinyoga</p>
+    </section>
+
+<!-----JavaScript for Drop Menu---->
+        <script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+
+// Close menu when clicking anywhere else
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.classList.contains("show")) {
+            menu.classList.remove("show");
+        }
+    }
+}
+</script>
+    </body>
+</html>
