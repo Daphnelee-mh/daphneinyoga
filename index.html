@@ -14,20 +14,34 @@
    
     <body>
       <section class="header">
-        <nav>
-          <a href="index.html"><img src=""></a>
-          <div class="nav-links" id="navLinks">
-            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="reading.html">Reading</a></li>
-              <li><a href="about.html">About</a></li>
+<nav>
+    <a href="index.html">
+        <img src="assets/images/logo.png" alt="Logo">
+    </a>
 
-            </ul>
-          </div>
-          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-        </nav>
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="reading.html">READING</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="dropdown-content" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="reading.html">Reading</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+</nav>
+CSS
         <div class="text-box">
           <h3>daphneinyoga</h3>         
  <p>
