@@ -137,9 +137,7 @@ nav img{
   border: 1px solid #fff;
   background:#000000;
 }
-nav .fa-solid{
-  display:none;
-}
+
 @media(max-width:800px){
 
     .nav-links{
