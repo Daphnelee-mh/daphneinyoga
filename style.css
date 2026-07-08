@@ -290,8 +290,8 @@ p{
 .content{
   width:80%;
   margin:auto;
-  padding-top:50px;
-  padding-bottom:50px
+  padding-top:10px;
+  padding-bottom:20px
 }
 
 .content-col{
@@ -301,7 +301,7 @@ p{
 
 .content-col img{
   height:80%;
-  width:80%;
+  width:70%;
 }
 .content-col h1{
   padding-top:0;
