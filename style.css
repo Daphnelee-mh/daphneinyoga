@@ -21,7 +21,8 @@ nav{
   padding: 1% 3%;
   justify-content: space-between;
   align-items: center;
-    z-index:10;
+    position:fixed;
+    z-index:1000;
 
 } 
 nav img{
@@ -68,6 +69,8 @@ nav img{
     display:none;
     position:relative;
     margin-left:auto;
+    z-index:1001;
+
 }
 
 /* Menu button */
@@ -90,7 +93,7 @@ nav img{
     border-radius:8px;
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
     overflow:hidden;
-      z-index:100;
+      z-index:1002;
 
 }
 
@@ -117,7 +120,6 @@ nav img{
   left:50%;
   transform:translate(-50%,-50%);
   text-align:center;
-    z-index:1;
 
 }
 .text-box h1{
