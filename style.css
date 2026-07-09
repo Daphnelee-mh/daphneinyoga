@@ -223,7 +223,7 @@ p{
 .reading-col{
   flex-basis:24%;
   background:#fff3f3;
-  border-radius:10px;
+  border-radius:0px;
   margin-bottom:30px;
   position:relative;
   overflow:hidden;
@@ -236,39 +236,6 @@ p{
 .reading a{
   text-decoration:none;
   color:black;
-}
-
-.layer{
-  background: transparent;
-  height: 100%;
-  width: 100%;
-  position:absolute;
-  top:0;
-  left:0;
-  transition:0.5s;
-}
-
-.layer:hover{
-  background: rgba(0,0,255,0.5);
-
-}
-
-.layer h4{
-  width:100%;
-  color:#fff;
-  padding-top:2px;
-  font-weight:400;
-  font-size:26px;
-  left:50%;
-  bottom:0;
-  transform:translateX(-50%);
-  position:absolute;
-  opacity:0;
-  transition:0.5s;
-}
-.layer:hover h4{
-  bottom:49%;
-  opacity:1;
 }
 
 
