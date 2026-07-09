@@ -288,6 +288,148 @@ p{
   text-decoration:none;
 }
 
+
+/* ==========================
+   Blog Page - The Art of Weaving
+   ========================== */
+
+.blog-header {
+    max-width: 800px;
+    margin: 120px auto 80px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.blog-header h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.blog-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #666;
+}
+
+
+/* Blog listing */
+
+.blog-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 25px 100px;
+}
+
+
+.blog-post {
+    padding: 45px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+.blog-date {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+
+.blog-post h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+
+.blog-post h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+.blog-post h2 a:hover {
+    opacity: 0.65;
+}
+
+
+.blog-excerpt {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Read more link */
+
+.read-more {
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+
+.read-more:hover {
+    opacity: 0.65;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .blog-header {
+        margin: 90px auto 60px;
+    }
+
+    .blog-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .blog-subtitle {
+        font-size: 1rem;
+    }
+
+    .blog-post {
+        padding: 35px 0;
+    }
+
+    .blog-post h2 {
+        font-size: 1.5rem;
+    }
+}
+/* ==========================
+   Reading Page - The Art of Seeing
+   ========================== */
+
+.content{
+  width:80%;
+  margin:auto;
+  padding-top:10px;
+  padding-bottom:0;
+}
+
+.content-col{
+  flex-basis:48%;
+  padding: 30px 2px;
+}
+
+.content-col img{
+  height:80%;
+  width:70%;
+}
+.content-col h1{
+  padding-top:0;
+}
+
+.content-col p{
+  padding: 15px 0 25px;
+}
 /*---------------about page ---------------*/
 
 .sub-header{
@@ -335,32 +477,6 @@ p{
 .red-btn:hover{
   color:#fff;
 }
-
-/*---------------reading page ---------------*/
-.content{
-  width:80%;
-  margin:auto;
-  padding-top:10px;
-  padding-bottom:0;
-}
-
-.content-col{
-  flex-basis:48%;
-  padding: 30px 2px;
-}
-
-.content-col img{
-  height:80%;
-  width:70%;
-}
-.content-col h1{
-  padding-top:0;
-}
-
-.content-col p{
-  padding: 15px 0 25px;
-}
-
 /*---------------contact us page ---------------*/
 
 .location{
