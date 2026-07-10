@@ -380,6 +380,33 @@ p{
     }
 }
 /* ==========================
+            Blog Post
+   ========================== */
+.post-container {
+    max-width: 750px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.blog-post {
+    line-height: 1.8;
+}
+
+.blog-post h1 {
+    margin-bottom: 20px;
+}
+
+.blog-post p {
+    margin-bottom: 25px;
+}
+@media(max-width:700px){
+
+    .post-container {
+        padding: 60px 20px;
+    }
+
+}
+/* ==========================
    Reading Page - The Art of Seeing
    ========================== */
 
