@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learning to See | The Sharing Space</title>
+        <link rel="stylesheet"  type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.google.com/">
+        <script src="https://kit.fontawesome.com/f83bac2574.js" crossorigin="anonymous"></script>
+    </head>
+   
+    <body>
+      <section class="header about-header">
+
+      <nav>
+    <a href="index.html" class="logo">
+    daphneinyoga
+</a>
+     <!-- Desktop menu -->
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="reading.html">Reading</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Mobile menu -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">
+            ☰
+        </button>
+        <div class="dropdown-content" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="reading.html">Reading</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+
+</nav>
+      <main class="post-container">
+
+    <article class="blog-post">
+
+        <p class="blog-date">July 2026</p>
+
+        <h1>Learning to See</h1>
+
+        <p class="subtitle">
+            A pause to observe, to understand, and to know ourselves a little deeper.
+        </p>
+
+
+        <p>
+            2/3 (16 hours) + 1/3 (8 hours) = 24 hours. 
+        </p>
+
+
+        <p>
+            Generally, we spend around two-thirds of our eyes with our eyes open, engage with the world, but how often do we truly see? From the moment we open our eyes in the morning, our attention is
+            constantly moving — to-do lists, conversations, expectations. Perhaps seeing is not only an act of the eyes, but an act of presence.
+        </p>
+
+
+        <h2>From Looking to Seeing</h2>
+
+        <p>
+            Looking is when we recognise what is in front of us.
+            Seeing is when we allow ourselves to experience it.
+        </p>
+         <p>
+            Maybe, pause and shift the way you see life. What if everything that exists is as an experience for us to witness.
+        </p>
+        <p>
+            Nature (Prakriti) provides the object of perception, while we continuously receive impression through our five senses (pancha bhutas) often without awareness or discernment.
+          We absorb, identify, and carry these experiences without pausing to understand their subtle patterns. How do you define yourself?
+        </p>
+        <p>
+          Everything we experience - our bodies, thoughts, emotions, relationships, and circumstances - is constantly changing. Yet beneath these changing experiences lies the Self, ever-present and unchanging.
+        </p>
+         <p>
+        When we cease identifying with what comes and goes, rest in our true nature, it's the quiet stability that remains through every season of life. </p>
+
+        <h2>Returning to Ourselves</h2>
+
+        <p>
+            When we slow down enough to observe the world, we also begin to observe ourselves.
+        </p>
+
+        <p>
+            We begin to understand that we are always choosing our experience and the direction we move forward - without forcing the outcomes.
+        </p>
+
+        <p>
+            A little patience for the slow unfolding of life. <br> You're already here. No rush.
+        </p>
+
+        <p>
+            Perhaps we are simply learning how to see.
+        </p>
+
+
+    </article>
+
+</main>
+        
+<!-----footer----->
+    <section class="footer">
+        <h4>About me</h4>
+        <p>Hi, I am Daphne. <br>I believe we become by being — through presence, awareness, and the journey of simply becoming ourselves.</p>
+        <div class="icons">
+        <a href="https://www.instagram.com/daphneinyoga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@daphneinyoga" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+               <p> ©daphneinyoga</p>
+    </section>
+<!-----JavaScript for Drop Menu---->
+        <script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+
+// Close menu when clicking anywhere else
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.classList.contains("show")) {
+            menu.classList.remove("show");
+        }
+    }
+}
+</script>
+    </body>
+</html>
+
 
