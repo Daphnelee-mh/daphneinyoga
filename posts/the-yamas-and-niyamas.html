@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Yamas & Niyamas | The Sharing Space</title>
+        <link rel="stylesheet"  type="text/css" href="../style.css">
+        <link rel="preconnect" href="https://fonts.google.com/">
+        <script src="https://kit.fontawesome.com/f83bac2574.js" crossorigin="anonymous"></script>
+    </head>
+   
+    <body>
+      <section class="header about-header">
+
+      <nav>
+    <a href="index.html" class="logo">
+    daphneinyoga
+</a>
+     <!-- Desktop menu -->
+    <div class="nav-links">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../reading.html">Reading</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Mobile menu -->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">
+            ☰
+        </button>
+        <div class="dropdown-content" id="mobileMenu">
+            <a href="../index.html">Home</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../reading.html">Reading</a>
+            <a href="../about.html">About</a>
+        </div>
+    </div>
+
+</nav>
+          </section>
+      <main class="post-container">
+
+    <article class="blog-post">
+
+        <p class="blog-date">July 2026</p>
+
+        <h1>The Yamas & Niyamas</h1>
+
+        <p class="subtitle">
+            The practice beyond the mat, exploring life through the Yamas (ethical restraints) and Niyamas (self-observances).
+        </p>
+
+
+        <p><b>
+            The journey begins by looking inward. There, we discover the freedom to choose our attitude, our thoughts, and our actions—becoming skillful participants in the adventure of being alive.
+        </b></p>
+
+
+        
+    </article>
+        <section class="references">
+    <h2>References</h2>
+    <ul>
+        <li>
+            Adele, D. (2009).
+            <em><a href="../reading.html">The Yamas & Niyamas</a>: Exploring Yoga's Ethical Practice.</em>
+        </li>
+    </ul>
+</section>
+
+</main>
+        
+<!-----footer----->
+    <section class="footer">
+        <h4>About me</h4>
+        <p>Hi, I am Daphne. <br>I believe we become by being — through presence, awareness, and the journey of simply becoming ourselves.</p>
+        <div class="icons">
+        <a href="https://www.instagram.com/daphneinyoga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@daphneinyoga" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+               <p> ©daphneinyoga</p>
+    </section>
+<!-----JavaScript for Drop Menu---->
+        <script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+
+// Close menu when clicking anywhere else
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.classList.contains("show")) {
+            menu.classList.remove("show");
+        }
+    }
+}
+</script>
+    </body>
+</html>
+
+
 
