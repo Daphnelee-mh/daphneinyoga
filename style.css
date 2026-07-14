@@ -413,6 +413,45 @@ p{
 .blog-post p {
     margin-bottom: 25px;
 }
+
+/* Reference Section */
+
+.reference {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.reference h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.reference p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #777;
+    margin: 0;
+}
+
+.reference em {
+    font-style: italic;
+}
+
+.reference a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: opacity 0.3s ease;
+}
+
+.reference a:hover {
+    opacity: 0.65;
+}
+
 @media(max-width:700px){
 
     .post-container {
