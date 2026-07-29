@@ -410,10 +410,17 @@ p{
     margin-bottom: 20px;
 }
 
-.blog-post p {
+.blog-post p,
+.blog-post ul {
     margin-bottom: 25px;
 }
-
+.blog-post li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+.blog-post > :last-child {
+    margin-bottom: 0;
+}
 /* Reference Section */
 
 .reference {
