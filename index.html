@@ -114,16 +114,6 @@ function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("show");
 }
 
-// Close mobile menu when clicking outside
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var menu = document.getElementById("mobileMenu");
-        if (menu.classList.contains("show")) {
-            menu.classList.remove("show");
-        }
-    }
-}
-
 // Change navbar background when scrolling
 window.addEventListener("scroll", function() {
     const nav = document.querySelector("nav");
