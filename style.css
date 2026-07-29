@@ -437,8 +437,8 @@ p{
 .blog-post li div {
     margin-top: 5px;
 }
-
-.blog-post > :last-child {
+.blog-post:last-child,
+.blog-post p:last-child {
     margin-bottom: 0;
 }
 
