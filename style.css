@@ -305,6 +305,18 @@ p{
     border-bottom: 1px solid #e8e8e8;
 }
 
+.back-blog {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.back-blog:hover {
+    opacity: 0.5;
+}
 
 .blog-date {
     font-size: 0.85rem;
