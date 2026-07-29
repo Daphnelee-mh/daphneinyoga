@@ -45,6 +45,9 @@ nav.scrolled .logo,
 nav.scrolled .nav-links ul li a {
     color: #333;
 }
+nav.scrolled .dropbtn {
+    color: #333;
+}
 nav img{
   width:300px; 
   display:inline-block;
