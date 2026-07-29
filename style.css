@@ -572,7 +572,25 @@ p{
 .about-col p{
   padding: 15px 0 25px;
 }
+.yoga-journey {
+    max-width: 750px;
+    margin: auto;
+    padding: 50px 30px;
+    text-align: center;
+    line-height: 1.8;
+}
 
+.yoga-journey p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.yoga-journey img {
+    width: 90px;
+    height: auto;
+    opacity: 0.8;
+}
 .red-btn{
   border: 1px solid #f44336;
   background:transparent;
