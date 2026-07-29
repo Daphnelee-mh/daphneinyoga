@@ -173,7 +173,9 @@ nav img{
     .nav-links{
         display:none;
     }
-
+nav.scrolled .dropbtn {
+    color: #333;
+}
     .dropdown{
         display:block;
         margin-left:auto;
