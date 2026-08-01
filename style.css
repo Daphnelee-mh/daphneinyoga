@@ -146,13 +146,14 @@ nav img{
 }
 
 .text-box h1 { 
-    font-size: 50px; 
+  font-size: 52px;
 }
 
 .text-box p { 
-    margin: 10px 40px 40px;
-    font-size: 14px;
-    color: #fff;
+  margin: 15px 40px 40px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.6;
 }
 
 .hero-btn { 
