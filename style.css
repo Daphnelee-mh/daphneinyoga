@@ -540,6 +540,13 @@ p{
 .content-col p{
   padding: 15px 0 25px;
 }
+.book-author {
+    font-size: 0.95rem;
+    color: #777;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
 /* ==========================
           About Page
    ========================== */
