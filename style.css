@@ -228,7 +228,7 @@ p{
   .row{
     flex-direction:column;
   }}
-.quote{
+.corevalue{
   width:80%;
   margin:auto;
   text-align:center;
@@ -474,7 +474,10 @@ p{
     margin-bottom: 0;
 }
 
-
+/* Quote */
+.quote {
+  border-left: 2px solid #888;
+}
 
 /* Reference Section */
 
