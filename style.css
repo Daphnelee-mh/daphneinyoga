@@ -429,7 +429,7 @@ p{
             Blog Post
    ========================== */
 .post-container {
-    max-width: 750px;
+    max-width: 920px;
     margin: auto;
     padding: 100px 30px;
 }
@@ -474,7 +474,7 @@ p{
     margin-bottom: 0;
 }
 
-/* Quote */
+
 
 /* Reference Section */
 
