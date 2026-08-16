@@ -477,7 +477,7 @@ p{
 /* Quote */
 .quote {
   margin: 2.5rem 0;
-  padding: 1.5rem 2rem;
+  padding-left: 1.5rem;
   border-left: 2px solid #888;
 }
 
@@ -487,16 +487,16 @@ p{
   letter-spacing: 0.05em;
 }
 
-.quote-text {
+.quote-original {
   margin: 0 0 0.75rem;
   font-size: 1.15rem;
-  line-height: normal;
+  line-height: 1.6;
 }
 
 .quote-translation {
   margin: 0;
   font-size: 0.95rem;
-  line-height: normal;
+  line-height: 1.6;
 }
 /* Reference Section */
 
