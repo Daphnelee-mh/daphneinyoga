@@ -481,6 +481,23 @@ p{
   border-left: 2px solid #888;
 }
 
+.quote-reference {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.quote-text {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.quote-translation {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 /* Reference Section */
 
 .reference {
