@@ -213,7 +213,7 @@ p{
   color:#777;
   font-size:14px;
   font-weight:300;
-  line-height:22px;
+  line-height:1.6;
   padding:10px;
 }
 .row{
@@ -444,7 +444,7 @@ p{
 
 .blog-post p,
 .blog-post ul {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .blog-post p,
@@ -490,13 +490,13 @@ p{
 .quote-text {
   margin: 0 0 0.75rem;
   font-size: 1.15rem;
-  line-height: 1.7;
+  line-height: normal;
 }
 
 .quote-translation {
   margin: 0;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: normal;
 }
 /* Reference Section */
 
