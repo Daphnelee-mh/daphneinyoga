@@ -106,7 +106,69 @@
             Perhaps we are simply learning how to see. <br> Enjoy the journey :) 
         </p>
 
+<section class="feedback-section" id="share-perspective">
+  <div class="feedback-container">
 
+    <h2>Share Your Perspective</h2>
+
+    <p class="feedback-intro">
+      These reflections come from my own experience and understanding at this moment.
+      If you see something differently, have another perspective, or simply want to
+      share something that came to mind, I'd love to hear from you.
+    </p>
+
+    <form
+      class="feedback-form"
+      action="https://formspree.io/f/xeaqqqvl"
+      method="POST">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">
+          Name <span class="optional">(optional)</span>
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Anonymous, a nickname, or your name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">
+          Email <span class="optional">(optional)</span>
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="You may leave your email if you'd like">
+      </div>
+
+      <!-- Perspective -->
+      <div class="form-group">
+        <label for="message">Your thoughts</label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="7"
+          placeholder="Your perspective, question, experience, or anything you'd like to share..."
+          required></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="feedback-submit">
+        Share Your Perspective
+      </button>
+
+    </form>
+
+  </div>
+</section>
     </article>
 
 </main>
