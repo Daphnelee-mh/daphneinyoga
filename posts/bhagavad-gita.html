@@ -156,52 +156,53 @@
 
 <div class="blog-tabs">
 
+   <div class="tabs">
+
+  <div class="tabs">
+
     <div class="tab-buttons">
-        <button class="tab-button active" onclick="openChapter(event, 'chapter1')">1</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter2')">2</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter3')">3</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter4')">4</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter5')">5</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter6')">6</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter7')">7</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter8')">8</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter9')">9</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter10')">10</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter11')">11</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter12')">12</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter13')">13</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter14')">14</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter15')">15</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter16')">16</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter17')">17</button>
-        <button class="tab-button" onclick="openChapter(event, 'chapter18')">18</button>
+        <button class="tab-button active" onclick="openTab(event, 'chapter1')">Chapter 1</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter2')">Chapter 2</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter3')">Chapter 3</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter4')">Chapter 4</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter5')">Chapter 5</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter6')">Chapter 6</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter7')">Chapter 7</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter8')">Chapter 8</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter9')">Chapter 9</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter10')">Chapter 10</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter11')">Chapter 11</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter12')">Chapter 12</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter13')">Chapter 13</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter14')">Chapter 14</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter15')">Chapter 15</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter16')">Chapter 16</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter17')">Chapter 17</button>
+        <button class="tab-button" onclick="openTab(event, 'chapter18')">Chapter 18</button>
     </div>
 
     <div id="chapter1" class="tab-content active">
         <h3>Chapter 1 — Arjuna Vishada Yoga</h3>
         <p><em>The Yoga of Arjuna's Despair</em></p>
 
-        <p>
-            <strong>Read first:</strong> Bhagavad Gita, Chapter 1.
-        </p>
-
-        <p>
-            <strong>What caught my attention:</strong> ...
-        </p>
-
-        <p>
-            <strong>What I'm wondering:</strong> ...
-        </p>
+      
     </div>
 
     <div id="chapter2" class="tab-content">
         <h3>Chapter 2 — Samkhya Yoga</h3>
         <p><em>The Yoga of Knowledge</em></p>
 
-        <p>
-            <strong>Read first:</strong> Bhagavad Gita, Chapter 2.
-        </p>
+        <p>.</p>
     </div>
+
+    <div id="chapter3" class="tab-content">
+        <h3>Chapter 3 — Karma Yoga</h3>
+        <p><em>The Yoga of Action</em></p>
+
+        <p></p>
+    </div>
+
+</div>
 
     <!-- Chapters 3–18 can be added as you read -->
 
@@ -316,6 +317,24 @@ window.onclick = function(event) {
     if (!button.contains(event.target) && !menu.contains(event.target)) {
         menu.classList.remove("show");
     }
+}
+</script>
+        <!-----JavaScript for Tabs---->
+        <script>
+function openTab(event, tabId) {
+    const contents = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-button");
+
+    contents.forEach(content => {
+        content.classList.remove("active");
+    });
+
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById(tabId).classList.add("active");
+    event.currentTarget.classList.add("active");
 }
 </script>
 
