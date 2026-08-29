@@ -504,7 +504,13 @@ p{
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
+/* Tab Function */
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
 /* Feedback Section */
 /* =========================
    Share Your Perspective
