@@ -505,11 +505,39 @@ p{
   line-height: 1.6;
 }
 /* Tab Function */
+.tabs {
+    width: 100%;
+}
+
 .tab-buttons {
     display: flex;
     gap: 8px;
     overflow-x: auto;
+    margin-bottom: 30px;
     padding-bottom: 8px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    font: inherit;
+    opacity: 0.6;
+}
+
+.tab-button.active {
+    opacity: 1;
+    border-bottom: 2px solid currentColor;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 /* Feedback Section */
 /* =========================
