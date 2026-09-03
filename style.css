@@ -539,6 +539,20 @@ p{
 .tab-content.active {
     display: block;
 }
+/* <--- Note Hover ---> */
+.note-content {
+    background-color: white;
+    padding: 15px;
+    display: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* <--- Show Note on Hover ---> */
+.note-term:hover + .note-content {
+    display: inline-block;
+}
 /* Feedback Section */
 /* =========================
    Share Your Perspective
