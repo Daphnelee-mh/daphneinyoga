@@ -540,6 +540,13 @@ p{
     display: block;
 }
 /* <--- Note Hover ---> */
+.note-term {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: help;
+}
+
 .note-content {
     background-color: white;
     padding: 15px;
@@ -549,7 +556,6 @@ p{
     margin-top: 10px;
 }
 
-/* <--- Show Note on Hover ---> */
 .note-term:hover + .note-content {
     display: inline-block;
 }
