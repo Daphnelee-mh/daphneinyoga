@@ -344,7 +344,12 @@ p{
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
-
+.blog-container img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
 
 .blog-post h2 {
     font-size: 1.8rem;
