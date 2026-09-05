@@ -34,4 +34,9 @@ fetch("footer.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("footer").innerHTML = data;
+
+        // Tell Font Awesome to process the newly added icons
+        if (window.FontAwesome) {
+            FontAwesome.dom.i2svg();
+        }
     });
