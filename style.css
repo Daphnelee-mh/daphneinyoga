@@ -296,12 +296,13 @@ color: #6b705c;
 }
 
 .icons .fa-youtube:hover {
-  color: #FF0000;   /* YouTube 
+  color: #FF0000;   /* YouTube */
 }
 
-.icons a:hover .substack-svg {
-  color: #FF6719;   /* Substack */
+.icons a[href*="substack"]:hover {
+    color: #FF6719;
 }
+    
 /* ==========================
    Blog Page - The Art of Weaving
    ========================== */
