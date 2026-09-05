@@ -29,6 +29,23 @@ window.addEventListener("scroll", function() {
     }
 });
 
+// ----- Tabs -----
+
+function openTab(event, tabId) {
+    const contents = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-button");
+
+    contents.forEach(content => {
+        content.classList.remove("active");
+    });
+
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
+
+    document.getElementById(tabId).classList.add("active");
+    event.currentTarget.classList.add("active");
+}
 
 // ----- Footer -----
 
