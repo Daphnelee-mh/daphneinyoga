@@ -4,6 +4,7 @@ function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("show");
 }
 
+// Change navbar background when scrolling
 window.addEventListener("click", function(event) {
     const menu = document.getElementById("mobileMenu");
     const button = document.querySelector(".dropbtn");
@@ -15,6 +16,7 @@ window.addEventListener("click", function(event) {
     }
 });
 
+  // Close mobile menu when clicking outside
 window.addEventListener("scroll", function() {
     const nav = document.querySelector("nav");
 
