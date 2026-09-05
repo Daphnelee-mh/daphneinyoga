@@ -273,10 +273,13 @@ p{
   font-weight:600;
 }
 
+.icons a {
+  text-decoration: none;
+}
+
 .icons .fa-brands{
   margin:0 10px;
   text-decoration:none;
-  color:#6b705c;
 }
 
 .icons .substack-svg{
@@ -284,7 +287,7 @@ p{
   height:1em;
   margin:0 10px;
   vertical-align:-0.125em;
-  color:#6b705c;
+  color:inherit;
 }
 /* ==========================
    Blog Page - The Art of Weaving
