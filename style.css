@@ -288,7 +288,6 @@ color: #6b705c;
   height:1em;
   margin:0 10px;
   vertical-align:-0.125em;
-  color:inherit;
 color: #6b705c;
 }
 .icons .fa-instagram:hover {
@@ -299,8 +298,8 @@ color: #6b705c;
   color: #FF0000;   /* YouTube */
 }
 
-.icons a[href*="substack"]:hover .substack-svg {
-    color: #FF6719;
+.icons a[href*="substack"]:hover .substack-svg path {
+  fill: #FF6719;
 }
     
 /* ==========================
