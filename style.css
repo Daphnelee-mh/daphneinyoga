@@ -515,10 +515,48 @@ p{
     width: 100%;
 }
 .tabs img {
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.tabs .relationship-map img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.side-notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.side-notes h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.side-note-group h4 {
+  margin-bottom: 15px;
+}
+
+.side-note-group p {
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tab-buttons {
