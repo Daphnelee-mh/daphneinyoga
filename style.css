@@ -280,6 +280,7 @@ p{
 .icons .fa-brands{
   margin:0 10px;
   text-decoration:none;
+color: #6b705c;
 }
 
 .icons .substack-svg{
@@ -288,6 +289,7 @@ p{
   margin:0 10px;
   vertical-align:-0.125em;
   color:inherit;
+color: #6b705c;
 }
 /* ==========================
    Blog Page - The Art of Weaving
