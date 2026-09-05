@@ -99,51 +99,10 @@
       </div>
   </section>
 
-
-<      
-    <!-----footer----->
-    <section class="footer">
-        <p>we become by being — through presence, awareness, and the journey of simply becoming ourselves.</p>
-       <div class="icons">
-    <a href="https://www.instagram.com/daphneinyoga/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
- <a href="https://www.youtube.com/@daphneinyoga" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://substack.com/@daphneinyoga" target="_blank">
-    <svg class="substack-svg"
-         xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 448 512">
-        <path fill="currentColor"
-              d="M448 512L224 386.4 0 512 0 230.7 448 230.7 448 512zm0-336.2l-448 0 0-60.5 448 0 0 60.5zM448 0L448 60.5 0 60.5 0 0 448 0z"/>
-    </svg>
-</a>
-</div>
-               <p> ©daphneinyoga</p>
-    </section>
-<!-----JavaScript for Navigation---->
-<script>
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-}
-
-// Change navbar background when scrolling
-window.addEventListener("scroll", function() {
-    const nav = document.querySelector("nav");
-
-    if (window.scrollY > 50) {
-        nav.classList.add("scrolled");
-    } else {
-        nav.classList.remove("scrolled");
-    }
-});
-    // Close mobile menu when clicking outside
-window.onclick = function(event) {
-    const menu = document.getElementById("mobileMenu");
-    const button = document.querySelector(".dropbtn");
-
-    if (!button.contains(event.target) && !menu.contains(event.target)) {
-        menu.classList.remove("show");
-    }
-}
-</script>
+    <!-----Javascript for Footer & Navigation----->
+  <div id="footer"></div>
+<script src="script.js"></script>
+        
     </body>
 </html>
 
