@@ -533,7 +533,11 @@ p{
   gap: 30px;
   align-items: start;
 }
-
+.side-notes-intro {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 20px;
+}
 .side-notes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
