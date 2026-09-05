@@ -291,6 +291,17 @@ color: #6b705c;
   color:inherit;
 color: #6b705c;
 }
+.icons .fa-instagram:hover {
+  color: #E4405F;   /* Instagram */
+}
+
+.icons .fa-youtube:hover {
+  color: #FF0000;   /* YouTube 
+}
+
+.icons a:hover .substack-svg {
+  color: #FF6719;   /* Substack */
+}
 /* ==========================
    Blog Page - The Art of Weaving
    ========================== */
