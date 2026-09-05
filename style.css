@@ -299,7 +299,7 @@ color: #6b705c;
   color: #FF0000;   /* YouTube */
 }
 
-.icons a[href*="substack"]:hover {
+.icons a[href*="substack"]:hover .substack-svg {
     color: #FF6719;
 }
     
