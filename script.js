@@ -1,12 +1,17 @@
+// ----- Determine page location -----
+
+const isPost = window.location.pathname.includes("/posts/");
+const basePath = isPost ? "../" : "";
 
 
 // ----- Header -----
 
-fetch("header.html")
+fetch(basePath + "header.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
     });
+
 
 // ----- Navigation -----
 
@@ -14,7 +19,7 @@ function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("show");
 }
 
-// Change navbar background when scrolling
+// Close mobile menu when clicking outside
 window.addEventListener("click", function(event) {
     const menu = document.getElementById("mobileMenu");
     const button = document.querySelector(".dropbtn");
@@ -26,7 +31,8 @@ window.addEventListener("click", function(event) {
     }
 });
 
-  // Close mobile menu when clicking outside
+
+// Change navbar background when scrolling
 window.addEventListener("scroll", function() {
     const nav = document.querySelector("nav");
 
@@ -38,6 +44,7 @@ window.addEventListener("scroll", function() {
         }
     }
 });
+
 
 // ----- Tabs -----
 
@@ -57,9 +64,10 @@ function openTab(event, tabId) {
     event.currentTarget.classList.add("active");
 }
 
+
 // ----- Footer -----
 
-fetch("footer.html")
+fetch(basePath + "footer.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("footer").innerHTML = data;
