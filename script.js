@@ -6,7 +6,7 @@ const basePath = isPost ? "../" : "";
 
 // ----- Header -----
 
-fetch(basePath + "header.html")
+fetch(basePath + "/header.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
