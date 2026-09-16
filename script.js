@@ -80,7 +80,7 @@ function nextChapter(tabId) {
     openTab(null, tabId);
 
     setTimeout(() => {
-        document.querySelector(".blog-tabs").scrollIntoView({
+        document.getElementById(tabId).scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
