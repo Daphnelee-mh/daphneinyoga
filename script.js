@@ -79,9 +79,8 @@ function openTab(event, tabId) {
 function nextChapter(tabId) {
     openTab(null, tabId);
 
-    // Scroll to the top of the new chapter
     setTimeout(() => {
-        document.getElementById(tabId).scrollIntoView({
+        document.querySelector(".blog-tabs").scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
