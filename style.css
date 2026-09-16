@@ -549,12 +549,6 @@ color: #6b705c;
   margin: 0;
 }
 
-.content-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 30px;
-  align-items: start;
-}
 .side-notes-intro {
   font-size: 0.9em;
   font-style: italic;
@@ -580,10 +574,6 @@ color: #6b705c;
 }
 
 @media (max-width: 768px) {
-  .content-layout {
-    grid-template-columns: 1fr;
-  }
-}
 
 .tab-buttons {
     display: flex;
