@@ -47,7 +47,6 @@ window.addEventListener("scroll", function() {
 
 
 // ----- Tabs -----
-
 function openTab(event, tabId) {
     const contents = document.querySelectorAll(".tab-content");
     const buttons = document.querySelectorAll(".tab-button");
@@ -61,7 +60,32 @@ function openTab(event, tabId) {
     });
 
     document.getElementById(tabId).classList.add("active");
-    event.currentTarget.classList.add("active");
+
+    // Only activate the button if the function was called by a tab button
+    if (event) {
+        event.currentTarget.classList.add("active");
+    } else {
+        // Find and activate the corresponding tab button
+        const button = document.querySelector(
+            `.tab-button[onclick*="'${tabId}'"]`
+        );
+
+        if (button) {
+            button.classList.add("active");
+        }
+    }
+}
+
+function nextChapter(tabId) {
+    openTab(null, tabId);
+
+    // Scroll to the top of the new chapter
+    setTimeout(() => {
+        document.getElementById(tabId).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }, 50);
 }
 
 
