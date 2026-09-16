@@ -573,7 +573,6 @@ color: #6b705c;
   margin: 8px 0;
 }
 
-@media (max-width: 768px) {
 
 .tab-buttons {
     display: flex;
