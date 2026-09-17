@@ -579,9 +579,8 @@ color: #6b705c;
     gap: 8px;
     overflow-x: auto;
     margin-bottom: 30px;
-    padding-bottom: 8px;
+    padding: 10px 0;
 
-    /* Keep tab navigation visible while scrolling */
     position: sticky;
     top: 70px;
     z-index: 10;
