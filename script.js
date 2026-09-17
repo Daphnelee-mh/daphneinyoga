@@ -80,15 +80,9 @@ function nextChapter(tabId) {
     openTab(null, tabId);
 
     setTimeout(() => {
-        const chapter = document.getElementById(tabId);
-        const headerOffset = 140;
-
-        const elementPosition = chapter.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
+        document.getElementById(tabId).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
     }, 50);
 }
