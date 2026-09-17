@@ -80,20 +80,23 @@ function nextChapter(tabId) {
     openTab(null, tabId);
 
     setTimeout(() => {
-        const tabs = document.querySelector(".tab-buttons");
+        const tabButtons = document.querySelector(".tab-buttons");
 
-        if (tabs) {
+        if (tabButtons) {
             const headerOffset = 70;
-            const tabsPosition = tabs.getBoundingClientRect().top + window.scrollY;
+
+            const position =
+                tabButtons.getBoundingClientRect().top +
+                window.scrollY -
+                headerOffset;
 
             window.scrollTo({
-                top: tabsPosition - headerOffset,
+                top: position,
                 behavior: "smooth"
             });
         }
     }, 50);
 }
-
 // ----- Footer -----
 
 fetch(basePath + "footer.html")
