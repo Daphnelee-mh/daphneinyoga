@@ -542,7 +542,10 @@ color: #6b705c;
   display: block;
   margin: 20px auto;
 }
-
+.gita-diagram {
+    display: block;
+    margin: 35px auto;
+}
 .tabs .relationship-map img {
   width: 100%;
   max-width: 100%;
