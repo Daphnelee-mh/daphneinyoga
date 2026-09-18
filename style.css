@@ -581,15 +581,15 @@ color: #6b705c;
     display: flex;
     gap: 8px;
     overflow-x: auto;
-    margin-bottom: 30px;
-    padding: 10px 0;
 
     position: sticky;
     top: 70px;
-    z-index: 10;
+    z-index: 100;
+
+    margin-bottom: 30px;
+    padding: 10px 0;
     background: white;
 }
-
 .tab-button {
     background: none;
     border: none;
