@@ -118,6 +118,7 @@ nav img{
     background:white;
     min-width:180px;
     border-radius:8px;
+
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
     overflow:hidden;
       z-index:1002;
@@ -533,13 +534,7 @@ color: #6b705c;
   line-height: 1.6;
 }
 /* Tab Function */
-.blog-tabs {
-    overflow: visible;
-}
 
-.tabs {
-    overflow: visible;
-}
 .tabs {
     position: relative;
 }
