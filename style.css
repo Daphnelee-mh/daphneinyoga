@@ -539,6 +539,14 @@ color: #6b705c;
 .tabs {
     width: 100%;
 }
+.tabs {
+    position: relative;
+}
+
+.tab-buttons {
+    position: sticky;
+    top: 70px;
+}
 .tabs img {
   max-width: 90%;
   height: auto;
