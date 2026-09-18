@@ -534,10 +534,11 @@ color: #6b705c;
 }
 /* Tab Function */
 .blog-tabs {
-    width: 100%;
+    overflow: visible;
 }
+
 .tabs {
-    width: 100%;
+    overflow: visible;
 }
 .tabs {
     position: relative;
@@ -600,9 +601,6 @@ color: #6b705c;
     margin-bottom: 30px;
     padding: 10px 0;
     background: white;
-    overflow: hidden;
-    overflow: auto;
-    overflow: scroll;
 }
 
 .tab-button {
