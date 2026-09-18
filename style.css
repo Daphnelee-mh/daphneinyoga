@@ -533,6 +533,9 @@ color: #6b705c;
   line-height: 1.6;
 }
 /* Tab Function */
+.blog-tabs {
+    width: 100%;
+}
 .tabs {
     width: 100%;
 }
@@ -589,7 +592,11 @@ color: #6b705c;
     margin-bottom: 30px;
     padding: 10px 0;
     background: white;
+    overflow: hidden;
+    overflow: auto;
+    overflow: scroll;
 }
+
 .tab-button {
     background: none;
     border: none;
