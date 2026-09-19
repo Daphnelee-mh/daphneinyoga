@@ -578,10 +578,15 @@ color: #6b705c;
 
 .chapter-navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 50px;
     padding-top: 20px;
 }
+
+.chapter-navigation:has(button + button) {
+    justify-content: space-between;
+}
+
 .chapter-navigation button {
     background: none;
     border: none;
