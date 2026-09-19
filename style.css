@@ -534,6 +534,18 @@ color: #6b705c;
   line-height: 1.6;
 }
 /* Tab Function */
+.blog-tabs {
+    overflow: visible !important;
+}
+
+.tabs {
+    overflow: visible !important;
+}
+
+.tab-content {
+    overflow: visible !important;
+}
+
 .tabs {
     position: relative;
     overflow: visible;
