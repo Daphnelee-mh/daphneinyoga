@@ -534,29 +534,23 @@ color: #6b705c;
   line-height: 1.6;
 }
 /* Tab Function */
-
 .tabs {
     position: relative;
-}
-
-.tab-buttons {
-    position: sticky;
-    top: 70px;
+    overflow: visible;
 }
 
 .tab-buttons {
     display: flex;
     gap: 8px;
     overflow-x: auto;
-
     position: sticky;
     top: 70px;
     z-index: 100;
-
     margin-bottom: 30px;
     padding: 10px 0;
     background: white;
 }
+
 
 .tab-button {
     background: none;
@@ -581,14 +575,14 @@ color: #6b705c;
     display: block;
 }
 
-.tab-navigation {
+.chapter-navigation {
     display: flex;
     justify-content: flex-end;
     margin-top: 50px;
     padding-top: 20px;
 }
 
-.tab-navigation button {
+.chapter-navigation button {
     background: none;
     border: none;
     font-size: 16px;
@@ -597,15 +591,10 @@ color: #6b705c;
     padding: 8px 0;
 }
 
-.tab-navigation button:hover {
+.chapter-navigation button:hover {
     color: #000;
 }
 
-activeButton.scrollIntoView({
-    behavior: "smooth",
-    inline: "center",
-    block: "nearest"
-});
 /* <--- Img within Tab ---> */
 .tabs img {
   max-width: 90%;
