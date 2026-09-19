@@ -103,20 +103,21 @@ function openTab(event, tabId, scrollToTabs = true) {
 
 // ----- Previous / Next Chapter -----
 function goToChapter(tabId) {
-    // Switch chapter without scrolling back to the tab bar
     openTab(null, tabId, false);
 
-    // Then scroll to the top of the new chapter
     setTimeout(() => {
         const chapter = document.getElementById(tabId);
+        const tabButtons = document.querySelector(".tab-buttons");
 
-        if (chapter) {
+        if (chapter && tabButtons) {
             const headerOffset = 70;
+            const tabBarHeight = tabButtons.offsetHeight;
 
             const position =
                 chapter.getBoundingClientRect().top +
                 window.scrollY -
-                headerOffset;
+                headerOffset -
+                tabBarHeight;
 
             window.scrollTo({
                 top: position,
