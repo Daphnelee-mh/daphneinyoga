@@ -100,8 +100,25 @@ function openTab(event, tabId) {
 
 function goToChapter(tabId) {
     openTab(null, tabId);
-}
 
+    setTimeout(() => {
+        const chapter = document.getElementById(tabId);
+
+        if (chapter) {
+            const headerOffset = 70;
+
+            const position =
+                chapter.getBoundingClientRect().top +
+                window.scrollY -
+                headerOffset;
+
+            window.scrollTo({
+                top: position,
+                behavior: "smooth"
+            });
+        }
+    }, 100);
+}
 // ----- Footer -----
 
 fetch(basePath + "footer.html")
