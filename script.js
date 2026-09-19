@@ -98,10 +98,9 @@ function openTab(event, tabId) {
     }, 50);
 }
 
-function nextChapter(tabId) {
+function goToChapter(tabId) {
     openTab(null, tabId);
 }
-
 
 // ----- Footer -----
 
