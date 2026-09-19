@@ -51,34 +51,34 @@ function openTab(event, tabId) {
     const contents = document.querySelectorAll(".tab-content");
     const buttons = document.querySelectorAll(".tab-button");
 
-    contents.forEach(content => {
-        content.classList.remove("active");
-    });
-
-    buttons.forEach(button => {
-        button.classList.remove("active");
-    });
+    contents.forEach(content => content.classList.remove("active"));
+    buttons.forEach(button => button.classList.remove("active"));
 
     document.getElementById(tabId).classList.add("active");
 
-    // Only activate the button if the function was called by a tab button
+    // Activate the correct tab button
+    let activeButton;
+
     if (event) {
-        event.currentTarget.classList.add("active");
+        activeButton = event.currentTarget;
     } else {
-        // Find and activate the corresponding tab button
-        const button = document.querySelector(
+        activeButton = document.querySelector(
             `.tab-button[onclick*="'${tabId}'"]`
         );
-
-        if (button) {
-            button.classList.add("active");
-        }
     }
-}
 
-function nextChapter(tabId) {
-    openTab(null, tabId);
+    if (activeButton) {
+        activeButton.classList.add("active");
 
+        // Keep the active button visible in the horizontal scroll
+        activeButton.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest"
+        });
+    }
+
+    // Scroll page so the sticky tab bar sits under the header
     setTimeout(() => {
         const tabButtons = document.querySelector(".tab-buttons");
 
@@ -97,6 +97,12 @@ function nextChapter(tabId) {
         }
     }, 50);
 }
+
+function nextChapter(tabId) {
+    openTab(null, tabId);
+}
+
+
 // ----- Footer -----
 
 fetch(basePath + "footer.html")
