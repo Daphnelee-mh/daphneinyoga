@@ -47,7 +47,7 @@ window.addEventListener("scroll", function() {
 
 
 // ----- Tabs -----
-function openTab(event, tabId) {
+function openTab(event, tabId, scrollToTabs = true) {
     const contents = document.querySelectorAll(".tab-content");
     const buttons = document.querySelectorAll(".tab-button");
 
@@ -79,28 +79,34 @@ function openTab(event, tabId) {
     }
 
     // Scroll page so the sticky tab bar sits under the header
-    setTimeout(() => {
-        const tabButtons = document.querySelector(".tab-buttons");
+    if (scrollToTabs) {
+        setTimeout(() => {
+            const tabButtons = document.querySelector(".tab-buttons");
 
-        if (tabButtons) {
-            const headerOffset = 70;
+            if (tabButtons) {
+                const headerOffset = 70;
 
-            const position =
-                tabButtons.getBoundingClientRect().top +
-                window.scrollY -
-                headerOffset;
+                const position =
+                    tabButtons.getBoundingClientRect().top +
+                    window.scrollY -
+                    headerOffset;
 
-            window.scrollTo({
-                top: position,
-                behavior: "smooth"
-            });
-        }
-    }, 50);
+                window.scrollTo({
+                    top: position,
+                    behavior: "smooth"
+                });
+            }
+        }, 50);
+    }
 }
 
-function goToChapter(tabId) {
-    openTab(null, tabId);
 
+// ----- Previous / Next Chapter -----
+function goToChapter(tabId) {
+    // Switch chapter without scrolling back to the tab bar
+    openTab(null, tabId, false);
+
+    // Then scroll to the top of the new chapter
     setTimeout(() => {
         const chapter = document.getElementById(tabId);
 
