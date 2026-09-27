@@ -662,6 +662,26 @@ color: #6b705c;
   margin: 8px 0;
 }
 
+/* <--- Reflection Box ---> */
+.reflection-box {
+  border: 1px solid #c9bba8;
+  border-radius: 12px;
+  background: #faf7f2;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.reflection-box p:first-child {
+  margin-top: 0;
+}
+
+.reflection-box p:last-child {
+  margin-bottom: 0;
+}
+
+.reflection-box ol {
+  padding-left: 1.4rem;
+}
 
 /* Feedback Section */
 /* =========================
