@@ -17,7 +17,7 @@
   background-position: center;
 }
 p {
-    font-size: 1.5rem;   /* 18px */
+    font-size: 1.5rem;   
     line-height: 1.8;
     margin-bottom: 1.25rem;
 }
@@ -212,7 +212,7 @@ nav.scrolled .dropbtn {
 }
 
 h3{
-  font-size:50px;
+  font-size:40px;
   font-weight:300;
 }
 p{
