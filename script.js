@@ -85,7 +85,7 @@ function openTab(event, tabId, scrollToTabs = true) {
     // Scroll to the beginning of the selected chapter
     if (scrollToTabs) {
         setTimeout(() => {
-            const headerOffset = 70;
+            const headerOffset = 30;
 
             const position =
                 selectedContent.getBoundingClientRect().top +
