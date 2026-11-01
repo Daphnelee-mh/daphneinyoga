@@ -47,6 +47,7 @@ window.addEventListener("scroll", function() {
 
 
 // ----- Tabs -----
+
 function openTab(event, tabId, scrollToTabs = true) {
     const contents = document.querySelectorAll(".tab-content");
     const buttons = document.querySelectorAll(".tab-button");
@@ -54,7 +55,11 @@ function openTab(event, tabId, scrollToTabs = true) {
     contents.forEach(content => content.classList.remove("active"));
     buttons.forEach(button => button.classList.remove("active"));
 
-    document.getElementById(tabId).classList.add("active");
+    const selectedContent = document.getElementById(tabId);
+
+    if (!selectedContent) return;
+
+    selectedContent.classList.add("active");
 
     // Activate the correct tab button
     let activeButton;
@@ -70,7 +75,6 @@ function openTab(event, tabId, scrollToTabs = true) {
     if (activeButton) {
         activeButton.classList.add("active");
 
-        // Keep the active button visible in the horizontal scroll
         activeButton.scrollIntoView({
             behavior: "smooth",
             inline: "center",
@@ -78,28 +82,23 @@ function openTab(event, tabId, scrollToTabs = true) {
         });
     }
 
-    // Scroll page so the sticky tab bar sits under the header
+    // Scroll to the beginning of the selected chapter
     if (scrollToTabs) {
         setTimeout(() => {
-            const tabButtons = document.querySelector(".tab-buttons");
+            const headerOffset = 70;
 
-            if (tabButtons) {
-                const headerOffset = 70;
+            const position =
+                selectedContent.getBoundingClientRect().top +
+                window.scrollY -
+                headerOffset;
 
-                const position =
-                    tabButtons.getBoundingClientRect().top +
-                    window.scrollY -
-                    headerOffset;
-
-                window.scrollTo({
-                    top: position,
-                    behavior: "smooth"
-                });
-            }
-        }, 50);
+            window.scrollTo({
+                top: position,
+                behavior: "smooth"
+            });
+        }, 100);
     }
 }
-
 
 // ----- Previous / Next Chapter -----
 function goToChapter(tabId) {
