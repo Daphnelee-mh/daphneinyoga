@@ -939,6 +939,264 @@ color: #6b705c;
 .red-btn:hover{
   color:#fff;
 }
+
+/* ==========================
+   Practice Page - Box Breathing
+   ========================== */
+
+.practice-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 25px 100px;
+    color: #222;
+}
+
+.practice-intro {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.practice-intro h3 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.practice-intro p {
+    font-size: 15px;
+    color: #777;
+    font-style: italic;
+}
+
+/* Introduction */
+
+.practice-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.practice-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.practice-heading h1 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.practice-description {
+    max-width: 560px;
+    margin: auto;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Breathing area */
+
+.breathing-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.breathing-square {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border: 2px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breathing-flower {
+    width: 35px;
+    height: 35px;
+    background: #222;
+    clip-path: polygon(
+        50% 0%, 63% 30%, 95% 20%,
+        75% 50%, 95% 80%, 63% 70%,
+        50% 100%, 37% 70%, 5% 80%,
+        25% 50%, 5% 20%, 37% 30%
+    );
+}
+
+.breathing-dot {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #222;
+    top: -7px;
+    left: -7px;
+    z-index: 2;
+}
+
+.breathing-phase {
+    margin-top: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.breathing-countdown {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Settings */
+
+.breathing-settings {
+    max-width: 520px;
+    margin: 60px auto 0;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.breathing-settings h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.setting-group {
+    margin-bottom: 30px;
+}
+
+.setting-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.setting-value {
+    font-weight: 600;
+}
+
+.setting-group input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.setting-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.setting-options button {
+    padding: 9px 18px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.setting-options button.active {
+    background: #222;
+    color: white;
+    border-color: #222;
+}
+
+/* Controls */
+
+.breathing-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.breathing-controls button {
+    padding: 12px 25px;
+    border: 1px solid #222;
+    background: white;
+    color: #222;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+.breathing-controls button.primary {
+    background: #222;
+    color: white;
+}
+
+.breathing-controls button:hover {
+    opacity: 0.65;
+}
+
+.breathing-controls button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Session information */
+
+.breathing-progress {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+}
+
+.breathing-reminder {
+    max-width: 520px;
+    margin: 45px auto 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #888;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .practice-container {
+        padding: 100px 20px 70px;
+    }
+
+    .practice-intro {
+        margin-bottom: 50px;
+    }
+
+    .practice-intro h3 {
+        font-size: 32px;
+    }
+
+    .practice-heading h1 {
+        font-size: 27px;
+    }
+
+    .breathing-square {
+        width: 220px;
+        height: 220px;
+    }
+
+    .breathing-settings {
+        padding: 22px;
+    }
+
+    .breathing-controls {
+        gap: 8px;
+    }
+
+    .breathing-controls button {
+        padding: 11px 18px;
+    }
+}
+
 /*---------------contact us page ---------------*/
 
 .location{
@@ -983,3 +1241,5 @@ color: #6b705c;
   margin-bottom:5px;
   font-weight:500px;
 }
+
+
