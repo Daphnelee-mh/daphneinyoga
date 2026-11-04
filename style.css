@@ -941,8 +941,71 @@ color: #6b705c;
 }
 
 /* ==========================
-   Practice Page - Box Breathing
+   Practice Page 
    ========================== */
+/* ----- Breathing Practice Welcome Screen ----- */
+
+.welcome-overlay {
+    position: fixed;
+    inset: 0;
+    background: #faf9f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.welcome-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 30px;
+    max-width: 600px;
+}
+
+.welcome-message h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 18px;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.welcome-message span {
+    font-size: 14px;
+    color: #777;
+}
+
+.welcome-message button {
+    display: block;
+    margin: 35px auto 0;
+    padding: 12px 30px;
+    border: 1px solid #222;
+    background: #222;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.welcome-message button:hover {
+    background: #444;
+}
+
+/* ==========================
+  Box Breathing
+========================== */
 
 .practice-container {
     max-width: 1000px;
