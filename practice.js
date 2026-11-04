@@ -1,4 +1,13 @@
+// ----- Welcome Screen -----
 
+const welcomeOverlay = document.getElementById("welcomeOverlay");
+const beginPractice = document.getElementById("beginPractice");
+
+if (welcomeOverlay && beginPractice) {
+    beginPractice.addEventListener("click", () => {
+        welcomeOverlay.classList.add("hide");
+    });
+}
 // ----- Box Breathing -----
 
 document.addEventListener("DOMContentLoaded", () => {
