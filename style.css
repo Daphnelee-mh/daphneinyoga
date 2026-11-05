@@ -1,104 +1,26 @@
-
-/* =================================
-   1. GLOBAL DESIGN SETTINGS
-================================= */
-
-:root {
-    /* Font family */
-    --font-main: 'Open Sans', Arial, sans-serif;
-
-    /* Font sizes */
-    --text-small: 0.875rem;   /* 14px */
-    --text-regular: 1rem;     /* 16px */
-    --text-body: 1.125rem;    /* 18px */
-    --text-large: 1.25rem;    /* 20px */
-
-    /* Heading sizes */
-    --heading-small: 1.5rem;  /* 24px */
-    --heading-medium: 2rem;   /* 32px */
-    --heading-large: 2.5rem;  /* 40px */
-
-    /* Text colours */
-    --colour-heading: #333333;
-    --colour-body: #555555;
-    --colour-muted: #777777;
-
-    /* Reading layout */
-    --content-width: 760px;
-}
-
-/* =================================
-   2. GLOBAL RESET
-================================= */
-
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   font-family: 'Open Sans', Arial, sans-serif;
+
 }
-
-/* =================================
-   3. GLOBAL TYPOGRAPHY
-================================= */
-
-body {
-    font-family: var(--font-main);
-    color: var(--colour-heading);
-    font-size: var(--text-regular);
-    line-height: 1.6;
-    font-weight: 400;
+.header{
+  min-height:80vh;
+  width:100%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)),url(assets/images/eagle.jpeg);
+  background-position: center 35%;
+  background-size: cover;
+  position:relative;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--colour-heading);
+.about-header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(assets/images/kaa2025writing.jpg);
+  background-position: center;
 }
-
-h3 {
-    font-size: var(--heading-large);
-    font-weight: 300;
-    line-height: 1.3;
-}
-
 p {
-    font-size: var(--text-body);
+    font-size: 18px;
     line-height: 1.8;
-    color: var(--colour-body);
     margin-bottom: 1.25rem;
 }
-
-
-.footer{
-  width:100%;
-  text-align:center;
-  padding:30px 0;
-}
-.footer h4{
-  margin-bottom: 15px;
-  margin-top:20px;
-  font-weight:600;
-}
-
-
-/* HERO SECTION */
-
-.header {
-    min-height: 80vh;
-    width: 100%;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-        url(assets/images/eagle.jpeg);
-    background-position: center 35%;
-    background-size: cover;
-    position: relative;
-}
-
-.about-header {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url(assets/images/kaa2025writing.jpg);
-    background-position: center;
-}
-
 .logo{
     color:#fff;
     text-decoration:none;
@@ -119,7 +41,6 @@ nav {
     z-index: 1000;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
 nav.scrolled {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -170,7 +91,6 @@ nav img{
   display:block;
   margin:auto;
 }
-
 /* Hide dropdown on desktop */
 .dropdown{
     display:none;
@@ -237,7 +157,7 @@ nav img{
 
 .text-box p { 
   margin: 15px 40px 40px;
-  font-size: var(--text-body);
+  font-size: 15px;
   color: #fff;
   line-height: 1.6;
 }
@@ -300,6 +220,7 @@ p{
   font-size:14px;
   font-weight:300;
   line-height:1.6;
+  padding:10px;
 }
 .row{
   margin-top:5%;
@@ -347,7 +268,16 @@ p{
 }
 
 
-
+.footer{
+  width:100%;
+  text-align:center;
+  padding:30px 0;
+}
+.footer h4{
+  margin-bottom: 15px;
+  margin-top:20px;
+  font-weight:600;
+}
 
 .icons a {
   text-decoration: none;
@@ -810,7 +740,7 @@ color: #6b705c;
     border: 1px solid #d8d3ca;
     border-radius: 8px;
     font-family: inherit;
-    font-size: 1.125rem;
+    font-size: 1rem;
     background-color: #fff;
 }
 
@@ -831,7 +761,7 @@ color: #6b705c;
     border: none;
     border-radius: 999px;
     font-family: inherit;
-    font-size: 1.125rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
@@ -1374,5 +1304,3 @@ color: #6b705c;
   margin-bottom:5px;
   font-weight:500px;
 }
-
-
