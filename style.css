@@ -227,7 +227,7 @@ h3{
 }
 p{
   color:#777;
-  font-size:14px;
+  font-size:1.125rem;
   font-weight:300;
   line-height:1.6;
   padding:10px;
@@ -867,9 +867,11 @@ color: #6b705c;
 
 .content-col p{
   padding: 15px 0 25px;
+font-size: 1.125rem;
+
 }
 .book-author {
-    font-size: 0.95rem;
+    font-size: 1.125rem;
     color: #777;
     font-style: italic;
     margin-top: -10px;
