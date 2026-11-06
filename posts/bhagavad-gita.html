@@ -3315,150 +3315,177 @@ By the time we reach the battlefield, the story has already unfolded across the 
     </p>
 <!-- The Divine Within SVG -->
 
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Golden aura -->
     <radialGradient id="aura">
       <stop offset="0%" stop-color="#FCE8B0" stop-opacity=".8"/>
       <stop offset="55%" stop-color="#D5A65D" stop-opacity=".2"/>
       <stop offset="100%" stop-color="#D5A65D" stop-opacity="0"/>
     </radialGradient>
+
+    <!-- Meditating figure -->
     <linearGradient id="figure" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#D9C39C"/>
       <stop offset="100%" stop-color="#9B8065"/>
     </linearGradient>
+
+    <!-- Lotus -->
     <linearGradient id="lotus" x1="0" y1="0" x2="0" y2="1">
       <stop stop-color="#FFF4D5"/>
       <stop offset="100%" stop-color="#D8A85F"/>
     </linearGradient>
   </defs>
 
-  <rect width="500" height="500" fill="#101C22"/>
+  <!-- Scaled and centred illustration -->
+  <g transform="translate(12.5 16.25) scale(0.75)">
 
-  <!-- Aura -->
-  <circle cx="250" cy="245" r="130" fill="url(#aura)">
-    <animate attributeName="r" values="110;155;110"
-      dur="6s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Expanding light -->
-  <g fill="none" stroke="#E9CB91">
-    <circle cx="250" cy="245" r="145" opacity=".3">
-      <animate attributeName="r" values="120;185;120"
-        dur="7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values=".35;0;.35"
-        dur="7s" repeatCount="indefinite"/>
+    <!-- Outer aura -->
+    <circle cx="250" cy="245" r="130" fill="url(#aura)">
+      <animate attributeName="r"
+        values="110;155;110"
+        dur="6s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="250" cy="245" r="175" opacity=".2">
-      <animate attributeName="r" values="155;215;155"
-        dur="8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values=".3;0;.3"
-        dur="8s" repeatCount="indefinite"/>
-    </circle>
-  </g>
 
-  <!-- Meditating figure -->
-  <g fill="url(#figure)" stroke="#D9C39C"
-     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Expanding light rings -->
+    <g fill="none" stroke="#D5B77F">
+      <circle cx="250" cy="245" r="145" opacity=".3">
+        <animate attributeName="r"
+          values="120;185;120"
+          dur="7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity"
+          values=".35;0;.35"
+          dur="7s" repeatCount="indefinite"/>
+      </circle>
 
-    <!-- Head -->
-    <circle cx="250" cy="105" r="27" stroke="none"/>
+      <circle cx="250" cy="245" r="175" opacity=".2">
+        <animate attributeName="r"
+          values="155;215;155"
+          dur="8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity"
+          values=".3;0;.3"
+          dur="8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
 
-    <!-- Body -->
-    <path d="
-      M225 145
-      Q205 155 200 185
-      L190 245
-      Q190 265 215 265
-      L285 265
-      Q310 265 310 245
-      L300 185
-      Q295 155 275 145
-      Q250 160 225 145Z"
-      stroke="none"/>
+    <!-- Meditating figure -->
+    <g fill="url(#figure)" stroke="#D9C39C"
+       stroke-linecap="round" stroke-linejoin="round">
 
-    <!-- Left arm -->
-    <path d="M207 165
-      Q175 180 170 220
-      L155 275
-      Q150 292 165 297
-      Q180 300 185 280
-      L215 215"
-      stroke-width="2"/>
+      <!-- Head -->
+      <circle cx="250" cy="105" r="27" stroke="none"/>
 
-    <!-- Right arm -->
-    <path d="M293 165
-      Q325 180 330 220
-      L345 275
-      Q350 292 335 297
-      Q320 300 315 280
-      L285 215"
-      stroke-width="2"/>
+      <!-- Body -->
+      <path d="
+        M225 145
+        Q205 155 200 185
+        L190 245
+        Q190 265 215 265
+        L285 265
+        Q310 265 310 245
+        L300 185
+        Q295 155 275 145
+        Q250 160 225 145Z"
+        stroke="none"/>
 
-    <!-- Cross-legged seated posture -->
-    <path d="
-      M210 250
-      Q170 260 135 300
-      Q115 325 145 335
-      Q185 350 225 325
-      Q250 310 250 295
-      Q250 310 275 325
-      Q315 350 355 335
-      Q385 325 365 300
-      Q330 260 290 250
-      Q275 275 250 275
-      Q225 275 210 250Z"
-      stroke="none"/>
+      <!-- Left arm -->
+      <path d="
+        M207 165
+        Q175 180 170 220
+        L155 275
+        Q150 292 165 297
+        Q180 300 185 280
+        L215 215"
+        stroke-width="2"/>
 
-    <!-- Hands resting on knees -->
-    <circle cx="165" cy="290" r="9" stroke="none"/>
-    <circle cx="335" cy="290" r="9" stroke="none"/>
-  </g>
+      <!-- Right arm -->
+      <path d="
+        M293 165
+        Q325 180 330 220
+        L345 275
+        Q350 292 335 297
+        Q320 300 315 280
+        L285 215"
+        stroke-width="2"/>
 
-  <!-- Inner heart light -->
-  <circle cx="250" cy="210" r="48" fill="url(#aura)">
-    <animate attributeName="r" values="38;52;38"
-      dur="4s" repeatCount="indefinite"/>
-  </circle>
+      <!-- Cross-legged seated posture -->
+      <path d="
+        M210 250
+        Q170 260 135 300
+        Q115 325 145 335
+        Q185 350 225 325
+        Q250 310 250 295
+        Q250 310 275 325
+        Q315 350 355 335
+        Q385 325 365 300
+        Q330 260 290 250
+        Q275 275 250 275
+        Q225 275 210 250Z"
+        stroke="none"/>
+    </g>
 
-  <!-- Lotus flower at heart -->
-  <g fill="url(#lotus)" stroke="#FBEAC4" stroke-width="1">
-    <path d="M250 225 Q210 190 250 155 Q290 190 250 225Z">
-      <animateTransform attributeName="transform"
-        type="translate" values="0 3;0 -3;0 3"
-        dur="4s" repeatCount="indefinite"/>
-    </path>
-    <path d="M250 225 Q190 215 195 180 Q230 185 250 225Z"/>
-    <path d="M250 225 Q310 215 305 180 Q270 185 250 225Z"/>
-    <path d="M250 225 Q205 235 200 205 Q225 200 250 225Z"/>
-    <path d="M250 225 Q295 235 300 205 Q275 200 250 225Z"/>
-  </g>
-
-  <!-- Lotus centre -->
-  <circle cx="250" cy="207" r="5" fill="#FFF9E9">
-    <animate attributeName="opacity" values=".5;1;.5"
-      dur="3s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Floating particles -->
-  <g fill="#FFE7B2">
-    <circle cx="155" cy="150" r="2">
-      <animate attributeName="cy" values="150;135;150"
+    <!-- Inner heart light -->
+    <circle cx="250" cy="210" r="48" fill="url(#aura)">
+      <animate attributeName="r"
+        values="38;52;38"
         dur="4s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="345" cy="150" r="2">
-      <animate attributeName="cy" values="150;130;150"
-        dur="5s" repeatCount="indefinite"/>
+
+    <!-- Lotus flower -->
+    <g fill="url(#lotus)" stroke="#FBEAC4" stroke-width="1">
+
+      <path d="M250 225 Q210 190 250 155 Q290 190 250 225Z">
+        <animateTransform attributeName="transform"
+          type="translate"
+          values="0 3;0 -3;0 3"
+          dur="4s" repeatCount="indefinite"/>
+      </path>
+
+      <path d="M250 225 Q190 215 195 180 Q230 185 250 225Z"/>
+      <path d="M250 225 Q310 215 305 180 Q270 185 250 225Z"/>
+      <path d="M250 225 Q205 235 200 205 Q225 200 250 225Z"/>
+      <path d="M250 225 Q295 235 300 205 Q275 200 250 225Z"/>
+    </g>
+
+    <!-- Lotus centre -->
+    <circle cx="250" cy="207" r="5" fill="#FFF9E9">
+      <animate attributeName="opacity"
+        values=".5;1;.5"
+        dur="3s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="120" cy="235" r="1.5">
-      <animate attributeName="opacity" values="0;1;0"
-        dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="380" cy="235" r="1.5">
-      <animate attributeName="opacity" values="0;1;0"
-        dur="5s" repeatCount="indefinite"/>
-    </circle>
+
+    <!-- Floating particles -->
+    <g fill="#D5A65D">
+
+      <circle cx="155" cy="150" r="2">
+        <animate attributeName="cy"
+          values="150;135;150"
+          dur="4s" repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="345" cy="150" r="2">
+        <animate attributeName="cy"
+          values="150;130;150"
+          dur="5s" repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="120" cy="235" r="1.5">
+        <animate attributeName="opacity"
+          values="0;1;0"
+          dur="4s" repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="380" cy="235" r="1.5">
+        <animate attributeName="opacity"
+          values="0;1;0"
+          dur="5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
   </g>
 </svg>
+
 
     
         <div class="chapter-navigation">
