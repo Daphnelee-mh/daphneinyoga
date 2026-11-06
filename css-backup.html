@@ -17,7 +17,7 @@
   background-position: center;
 }
 p {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.8;
     margin-bottom: 1.25rem;
 }
@@ -27,6 +27,8 @@ p {
     font-size:18px;
     font-weight:500;
 }
+
+/* Navigation bar */
 nav {
     display: flex;
     padding: 15px 3%;
@@ -41,6 +43,7 @@ nav {
     z-index: 1000;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 nav.scrolled {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -50,6 +53,7 @@ nav.scrolled .logo,
 nav.scrolled .nav-links ul li a {
     color: #333;
 }
+
 nav.scrolled .dropbtn {
     color: #333;
 }
@@ -64,17 +68,20 @@ nav img{
   margin-left:auto;
   display:block;
 }
+
 .nav-links ul li{
   list-style: none;
   display:inline-block;
   padding: 8px 12px;
   position:relative;
 }
+
 .nav-links ul li a{
   color:#fff;
   text-decoration:none;
-  font-size: 15px;
+  font-size: 16px;
 }
+
 .nav-links ul li::after{
   content:"";
   width:0%;
@@ -83,6 +90,7 @@ nav img{
   display:block;
   margin:auto;
 }
+
 .nav-links ul li:hover::after{
   content:"";
   width:100%;
@@ -91,6 +99,8 @@ nav img{
   display:block;
   margin:auto;
 }
+
+
 /* Hide dropdown on desktop */
 .dropdown{
     display:none;
@@ -157,7 +167,7 @@ nav img{
 
 .text-box p { 
   margin: 15px 40px 40px;
-  font-size: 15px;
+  font-size: 1.125rem;
   color: #fff;
   line-height: 1.6;
 }
@@ -168,7 +178,7 @@ nav img{
     color: #fff;
     border: 1px solid #fff;
     padding: 12px 34px;
-    font-size: 15px;
+    font-size: 1.125rem;
     background: transparent;
     position: relative;
     cursor: pointer;
@@ -217,7 +227,7 @@ h3{
 }
 p{
   color:#777;
-  font-size:14px;
+  font-size:1.125rem;
   font-weight:300;
   line-height:1.6;
   padding:10px;
@@ -857,9 +867,11 @@ color: #6b705c;
 
 .content-col p{
   padding: 15px 0 25px;
+font-size: 1.125rem;
+
 }
 .book-author {
-    font-size: 0.95rem;
+    font-size: 1.125rem;
     color: #777;
     font-style: italic;
     margin-top: -10px;
