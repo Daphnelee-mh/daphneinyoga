@@ -3229,7 +3229,7 @@ By the time we reach the battlefield, the story has already unfolded across the 
     <p>
         The divine pervades the entire universe in an unmanifest form.
         All beings exist within this greater reality, yet the divine
-        is not limited by them.
+        is not limited by them. 
     </p>
 
     <blockquote class="quote">
@@ -3238,10 +3238,247 @@ By the time we reach the battlefield, the story has already unfolded across the 
         </p>
     </blockquote>
 
+<!-- Supreme divine -> universe -> nature SVG -->
+
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <radialGradient id="divineGlow">
+      <stop offset="0%" stop-color="#FCE8B0" stop-opacity=".12"/>
+      <stop offset="75%" stop-color="#D5A65D" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#D5A65D" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="natureBg">
+      <stop offset="0%" stop-color="#F8F0D9"/>
+      <stop offset="100%" stop-color="#E9DFC3"/>
+    </radialGradient>
+
+    <radialGradient id="universeBg">
+      <stop offset="0%" stop-color="#526078"/>
+      <stop offset="100%" stop-color="#303D53"/>
+    </radialGradient>
+
+    <clipPath id="natureClip">
+      <circle cx="200" cy="200" r="57"/>
+    </clipPath>
+
+    <clipPath id="universeClip">
+      <circle cx="200" cy="200" r="110"/>
+    </clipPath>
+  </defs>
+
+  <!-- Scale entire illustration -->
+  <g transform="translate(200 200) scale(0.8) translate(-200 -200)">
+
+    <!-- Outer divine aura -->
+    <circle cx="200" cy="200" r="184"
+            fill="url(#divineGlow)">
+      <animate attributeName="r"
+               values="178;188;178"
+               dur="8s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Circle 3: Supreme Divine -->
+    <circle cx="200" cy="200" r="170"
+            fill="none"
+            stroke="#D5AD68"
+            stroke-width="1.2"
+            opacity=".65">
+      <animate attributeName="r"
+               values="166;172;166"
+               dur="8s"
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+               values=".4;.8;.4"
+               dur="8s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Divine particles -->
+    <g fill="#D5AD68">
+      <circle cx="200" cy="35" r="2"/>
+      <circle cx="320" cy="80" r="1.8"/>
+      <circle cx="365" cy="200" r="2"/>
+      <circle cx="80" cy="105" r="1.8"/>
+      <circle cx="90" cy="300" r="2"/>
+      <circle cx="300" cy="330" r="1.8"/>
+
+      <animate attributeName="opacity"
+               values=".3;1;.3"
+               dur="5s"
+               repeatCount="indefinite"/>
+    </g>
+
+    <!-- Circle 2: Universe -->
+    <circle cx="200" cy="200" r="110"
+            fill="url(#universeBg)"
+            stroke="#CDA96D"
+            stroke-width="1.5"/>
+
+    <g clip-path="url(#universeClip)">
+
+      <!-- Galaxy -->
+      <g transform="translate(155 155)">
+        <ellipse rx="23" ry="8"
+                 fill="none"
+                 stroke="#E9C98B"
+                 stroke-width="3"
+                 opacity=".4"
+                 transform="rotate(-30)">
+          <animateTransform attributeName="transform"
+                            type="rotate"
+                            from="0" to="360"
+                            dur="45s"
+                            repeatCount="indefinite"/>
+        </ellipse>
+        <circle r="3" fill="#F9E4B3"/>
+        <circle cx="-12" cy="-4" r="1.5" fill="#F9E4B3"/>
+        <circle cx="12" cy="4" r="1.5" fill="#F9E4B3"/>
+      </g>
+
+      <!-- Planet -->
+      <g transform="translate(265 172)">
+        <circle r="10" fill="#D9C49D"/>
+        <ellipse rx="17" ry="5"
+                 fill="none"
+                 stroke="#E8D4AC"
+                 stroke-width="1.8"
+                 transform="rotate(-20)"/>
+      </g>
+
+      <circle cx="110" cy="210" r="6" fill="#D7C49F"/>
+      <circle cx="275" cy="240" r="4" fill="#E8D4AC"/>
+
+      <!-- Stars -->
+      <g fill="#FFF0CE">
+        <circle cx="190" cy="110" r="1.5"/>
+        <circle cx="230" cy="125" r="1.3"/>
+        <circle cx="115" cy="170" r="1.2"/>
+        <circle cx="245" cy="205" r="1.5"/>
+        <circle cx="165" cy="265" r="1.3"/>
+        <circle cx="280" cy="135" r="1.2"/>
+        <circle cx="195" cy="285" r="1.5"/>
+      </g>
+
+      <g fill="#FCE8B0">
+        <circle cx="190" cy="110" r="1.5">
+          <animate attributeName="opacity"
+                   values=".2;1;.2"
+                   dur="3s"
+                   repeatCount="indefinite"/>
+        </circle>
+        <circle cx="245" cy="205" r="1.5">
+          <animate attributeName="opacity"
+                   values="1;.2;1"
+                   dur="4s"
+                   repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+    </g>
+    <!-- Circle 1: Nature -->
+    <circle cx="200" cy="200" r="57"
+            fill="url(#natureBg)"
+            stroke="#D5AD68"
+            stroke-width="1.5"/>
+
+    <g clip-path="url(#natureClip)">
+
+      <!-- Sun -->
+      <circle cx="205" cy="172" r="12"
+              fill="#F2DDA7"
+              opacity=".9">
+        <animate attributeName="opacity"
+                 values=".7;1;.7"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Distant mountains -->
+      <path d="M130 205 L170 168 L195 193
+               L220 169 L270 210 Z"
+            fill="#B9B49B"/>
+
+      <path d="M155 195 L170 168 L184 183
+               L173 179 Z"
+            fill="#F4EBD7"/>
+
+      <path d="M195 193 L220 169 L239 190
+               L225 183 Z"
+            fill="#F4EBD7"/>
+
+      <!-- Foreground hills -->
+      <path d="M130 210 Q170 188 200 207
+               Q230 185 270 210 L270 260 L130 260 Z"
+            fill="#A6AD86"/>
+
+      <path d="M130 218 Q175 199 205 217
+               Q235 198 270 220 L270 260 L130 260 Z"
+            fill="#78896C"/>
+
+      <!-- Flowing river -->
+      <path d="M180 260 Q195 235 215 220
+               Q225 210 240 205"
+            fill="none"
+            stroke="#DCE5D7"
+            stroke-width="5"
+            stroke-linecap="round"
+            opacity=".9">
+        <animate attributeName="stroke-dasharray"
+                 values="2 5;7 5;2 5"
+                 dur="5s"
+                 repeatCount="indefinite"/>
+      </path>
+
+      <!-- Tree -->
+      <path d="M155 215 L155 180"
+            stroke="#766C4F"
+            stroke-width="2.5"
+            fill="none"/>
+
+      <g fill="#8A9871">
+        <circle cx="147" cy="177" r="11"/>
+        <circle cx="160" cy="171" r="13"/>
+        <circle cx="168" cy="183" r="9"/>
+        <circle cx="149" cy="190" r="8"/>
+      </g>
+
+      <!-- Gentle leaf movement -->
+      <path d="M145 174 Q137 164 142 160
+               M162 167 Q171 157 175 163"
+            stroke="#78896C"
+            stroke-width="1"
+            fill="none"
+            stroke-linecap="round">
+        <animate attributeName="opacity"
+                 values=".5;1;.5"
+                 dur="4s"
+                 repeatCount="indefinite"/>
+      </path>
+
+    </g>
+
+    <!-- Inner circle breathing -->
+    <circle cx="200" cy="200" r="57"
+            fill="none"
+            stroke="#D5AD68"
+            stroke-width=".8"
+            opacity=".5">
+      <animate attributeName="opacity"
+               values=".3;.8;.3"
+               dur="6s"
+               repeatCount="indefinite"/>
+    </circle>
+
+  </g>
+</svg>
+
     <p>
         An analogy is given of the wind moving through space:
         just as the wind exists within space without affecting
-        the vastness of space itself, all beings exist within the divine.
+        the vastness of space itself, all beings exist within the divine. (9.6)
     </p>
 
     <p>
@@ -3387,12 +3624,6 @@ By the time we reach the battlefield, the story has already unfolded across the 
         the chapter encourages a deeper connection with the divine.
         This connection does not depend on elaborate rituals or material offerings,
         but on sincerity, faith and the intention behind our actions.
-    </p>
-
-    <p>
-        If the divine is already present in all existence,
-        perhaps devotion is also about learning to recognise
-        and honour that presence in the way we live.
     </p>
 
     <p>
