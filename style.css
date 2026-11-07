@@ -259,6 +259,9 @@ nav img{
 .text-box h1 { 
   font-size: var(--heading-xl);
 }
+.text-box h3 { 
+  color: var(--color-white);
+}
 
 .text-box p { 
   margin: var(--space-5) var(--space-11) var(--space-11);
