@@ -176,7 +176,7 @@ nav img {
 .nav-links ul li a {
     color: var(--color-white);
     text-decoration: none;
-    font-size: 1.05rem;
+    font-size: 1.125rem;
 }
 
 /* Hover underline */
