@@ -997,12 +997,11 @@ font-size: var(--font-lg);
 /* =================================
    BREATHING PRACTICE PAGE
 ================================= */
-
-
+/* Welcome Modal */
 .welcome-overlay {
     position: fixed;
     inset: 0;
-    background: #faf9f6;
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1016,10 +1015,14 @@ font-size: var(--font-lg);
     pointer-events: none;
 }
 
+/* Welcome Message Box */
 .welcome-message {
     text-align: center;
     padding: var(--space-9);
-    max-width: 600px;
+    width: min(90%, 420px);
+    background: #faf9f6;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
 .welcome-message h2 {
