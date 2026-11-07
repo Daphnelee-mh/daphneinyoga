@@ -1,4 +1,4 @@
-// ----- Welcome Screen -----
+// ----- Welcome Modal -----
 
 const welcomeOverlay = document.getElementById("welcomeOverlay");
 const beginPractice = document.getElementById("beginPractice");
@@ -8,6 +8,7 @@ if (welcomeOverlay && beginPractice) {
         welcomeOverlay.classList.add("hide");
     });
 }
+
 // ----- Box Breathing -----
 
 document.addEventListener("DOMContentLoaded", () => {
