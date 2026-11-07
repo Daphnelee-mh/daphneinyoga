@@ -1,20 +1,100 @@
+/* =================================
+   DESIGN TOKENS
+   Shared values for typography, colour and spacing
+================================= */
+:root {
+    /* Font family */
+    --font-primary: 'Open Sans', Arial, sans-serif;
+
+    /* Font sizes */
+    --font-xs: 0.75rem;       /* 12px */
+    --font-sm: 0.875rem;      /* 14px */
+    --font-base: 1rem;        /* 16px */
+    --font-lg: 1.125rem;      /* 18px */
+    --font-xl: 1.25rem;       /* 20px */
+    --font-2xl: 1.5rem;       /* 24px */
+    --font-caption: 0.85rem;
+    --font-small: 0.9rem;
+    --font-reading-small: 0.95rem;
+    --font-subtitle: 1.1rem;
+    --font-link: 1.2rem;
+    --font-quote: 1.15rem;
+
+    /* Heading sizes */
+    --heading-sm: 2rem;       /* 32px */
+    --heading-md: 2.5rem;     /* 40px */
+    --heading-article: 1.8rem;
+    --heading-lg: 2.8rem;     /* Blog display heading */
+    --heading-xl: 3.25rem;    /* 52px */
+
+    /* Font weights */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+
+    /* Line heights */
+    --line-tight: 1.3;
+    --line-normal: 1.6;
+    --line-relaxed: 1.8;
+    --line-loose: 1.9;
+
+    /* Colours */
+    --color-heading: #000;
+    --color-text: #555;
+    --color-white: #fff;
+
+    /* Spacing */
+    --space-1: 5px;
+    --space-2: 8px;
+    --space-3: 10px;
+    --space-4: 12px;
+    --space-5: 15px;
+    --space-6: 18px;
+    --space-7: 20px;
+    --space-8: 25px;
+    --space-9: 30px;
+    --space-10: 35px;
+    --space-11: 40px;
+    --space-12: 45px;
+    --space-13: 50px;
+    --space-14: 60px;
+    --space-15: 70px;
+    --space-16: 80px;
+    --space-17: 100px;
+}
+
 
 /* =================================
    GLOBAL RESET & TYPOGRAPHY
 ================================= */
-*{
+* {
     margin: 0;
     padding: 0;
-   font-family: 'Open Sans', Arial, sans-serif;
-
 }
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+}
+
+/* Keep form controls consistent with the site typography */
+button, input, textarea, select {
+    font: inherit;
+}
+
+/* Global heading defaults */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+}
+
 /* Global paragraph defaults */
 p {
-    color: #777;
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.6;
-    padding: 10px;
+    color: var(--color-text);
+    font-size: var(--font-lg);
+    font-weight: var(--weight-light);
+    line-height: var(--line-normal);
+    padding: var(--space-3);
     margin-bottom: 1.25rem;
 }
 
@@ -39,16 +119,16 @@ p {
 ================================= */
 
 .logo{
-    color:#fff;
+    color:var(--color-white);
     text-decoration:none;
-    font-size:18px;
-    font-weight:500;
+    font-size:var(--font-lg);
+    font-weight:var(--weight-medium);
 }
 
 /* Navigation bar */
 nav {
     display: flex;
-    padding: 15px 3%;
+    padding: var(--space-5) 3%;
     justify-content: space-between;
     align-items: center;
 
@@ -68,17 +148,16 @@ nav.scrolled {
 
 nav.scrolled .logo,
 nav.scrolled .nav-links ul li a {
-    color: #333;
+    color: var(--color-text);
 }
 
 nav.scrolled .dropbtn {
-    color: #333;
+    color: var(--color-text);
 }
 nav img{
   width:300px; 
   display:inline-block;
-  padding: 8px 12px;
-  position:left;
+  padding: var(--space-2) var(--space-4);
 
 }
 .nav-links{
@@ -89,14 +168,14 @@ nav img{
 .nav-links ul li{
   list-style: none;
   display:inline-block;
-  padding: 8px 12px;
+  padding: var(--space-2) var(--space-4);
   position:relative;
 }
 
 .nav-links ul li a{
-  color:#fff;
+  color:var(--color-white);
   text-decoration:none;
-  font-size: 16px;
+  font-size: var(--font-base);
 }
 
 .nav-links ul li::after{
@@ -108,13 +187,8 @@ nav img{
   margin:auto;
 }
 
-.nav-links ul li:hover::after{
-  content:"";
-  width:100%;
-  height: 3px;
-  background: #000000;
-  display:block;
-  margin:auto;
+.nav-links ul li:hover::after {
+    width: 100%;
 }
 
 
@@ -131,8 +205,8 @@ nav img{
 .dropbtn{
     background:none;
     border:none;
-    color:white;
-    font-size:28px;
+    color:var(--color-white);
+    font-size:1.75rem;
     cursor:pointer;
 }
 
@@ -154,9 +228,9 @@ nav img{
 
 .dropdown-content a{
     display:block;
-    padding:14px 18px;
+    padding:14px var(--space-6);
     text-decoration:none;
-    color:#333;
+    color:var(--color-text);
 }
 
 .dropdown-content a:hover{
@@ -173,7 +247,7 @@ nav img{
 
 .text-box {
     width: 90%;
-    color: #fff;
+    color: var(--color-white);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -183,23 +257,23 @@ nav img{
 }
 
 .text-box h1 { 
-  font-size: 52px;
+  font-size: var(--heading-xl);
 }
 
 .text-box p { 
-  margin: 15px 40px 40px;
-  font-size: 1.125rem;
-  color: #fff;
-  line-height: 1.6;
+  margin: var(--space-5) var(--space-11) var(--space-11);
+  font-size: var(--font-lg);
+  color: var(--color-white);
+  line-height: var(--line-normal);
 }
 
 .hero-btn { 
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-white);
     border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 1.125rem;
+    padding: var(--space-4) 34px;
+    font-size: var(--font-lg);
     background: transparent;
     position: relative;
     cursor: pointer;
@@ -217,7 +291,7 @@ nav img{
   width:80%;
   margin:auto;
   text-align:center;
-  padding-top:100px;
+  padding-top:var(--space-17);
 }
 .intro .fa-solid{
   font-size:35px;
@@ -225,8 +299,8 @@ nav img{
 }
 
 h3{
-  font-size:40px;
-  font-weight:300;
+  font-size:var(--heading-md);
+  font-weight:var(--weight-light);
 }
 .row{
   margin-top:5%;
@@ -238,19 +312,19 @@ h3{
   width:80%;
   margin:auto;
   text-align:center;
-  padding-top:50px;
+  padding-top:var(--space-13);
 }
 .reading{
   width:80%;
   margin:auto;
   text-align:center;
-  padding-top:50px;
+  padding-top:var(--space-13);
 }
 .reading-col{
     flex-basis:24%;
     background:#fff3f3;
     border-radius:0px;
-    margin-bottom:30px;
+    margin-bottom:var(--space-9);
     position:relative;
     overflow:hidden;
 }
@@ -264,7 +338,7 @@ h3{
 
 .reading a{
   text-decoration:none;
-  color:black;
+  color:var(--color-heading);
 }
 /* =================================
    FOOTER & SOCIAL ICONS
@@ -275,12 +349,12 @@ h3{
 .footer{
   width:100%;
   text-align:center;
-  padding:30px 0;
+  padding:var(--space-9) 0;
 }
 .footer h4{
-  margin-bottom: 15px;
-  margin-top:20px;
-  font-weight:600;
+  margin-bottom: var(--space-5);
+  margin-top:var(--space-7);
+  font-weight:var(--weight-semibold);
 }
 
 .icons a {
@@ -288,7 +362,7 @@ h3{
 }
 
 .icons .fa-brands{
-  margin:0 10px;
+  margin:0 var(--space-3);
   text-decoration:none;
 color: #6b705c;
 }
@@ -296,7 +370,7 @@ color: #6b705c;
 .icons .substack-svg{
   width:1em;
   height:1em;
-  margin:0 10px;
+  margin:0 var(--space-3);
   vertical-align:-0.125em;
 color: #6b705c;
 }
@@ -328,23 +402,23 @@ color: #6b705c;
 }
 .blog-header {
     max-width: 800px;
-    margin: 120px auto 80px;
+    margin: 120px auto var(--space-16);
     text-align: center;
-    padding: 0 20px;
+    padding: 0 var(--space-7);
 }
 
 .blog-header h1 {
-    font-size: 2.8rem;
-    font-weight: 400;
+    font-size: var(--heading-lg);
+    font-weight: var(--weight-regular);
     letter-spacing: 0.5px;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-7);
 }
 
 .blog-subtitle {
-    font-size: 1.1rem;
+    font-size: var(--font-subtitle);
     font-style: italic;
-    line-height: 1.8;
-    color: #666;
+    line-height: var(--line-relaxed);
+    color: var(--color-text);
 }
 
 
@@ -353,19 +427,19 @@ color: #6b705c;
 .blog-container {
     max-width: 920px;
     margin: 0 auto;
-    padding: 0 25px 100px;
+    padding: 0 var(--space-8) var(--space-17);
 }.blog-post {
-    padding: 45px 0;
+    padding: var(--space-12) 0;
     border-bottom: 1px solid #e8e8e8;
-    line-height: 1.8;
+    line-height: var(--line-relaxed);
 }
 
 
 .back-blog {
     display: inline-block;
-    margin-bottom: 30px;
-    color: #555;
-    font-size: 1.2rem;
+    margin-bottom: var(--space-9);
+    color: var(--color-text);
+    font-size: var(--font-link);
     text-decoration: none;
     transition: opacity 0.3s ease;
 }
@@ -375,22 +449,22 @@ color: #6b705c;
 }
 
 .blog-date {
-    font-size: 0.85rem;
-    color: #888;
+    font-size: var(--font-caption);
+    color: var(--color-text);
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: var(--space-5);
 }
 
 
 .blog-post h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 15px;
+    font-size: var(--heading-article);
+    font-weight: var(--weight-regular);
+    margin-bottom: var(--space-5);
 }
 
 
 .blog-post h2 a {
-    color: #333;
+    color: var(--color-heading);
     text-decoration: none;
 }
 
@@ -399,40 +473,40 @@ color: #6b705c;
     opacity: 0.65;
 }
 .blog-section {
-    margin-bottom: 35px;
+    margin-bottom: var(--space-10);
 }
 
 .blog-section h4 {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
 }.blog-post ul {
-    margin: 25px 0;
+    margin: var(--space-8) 0;
     padding-left: 1.5rem;
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.9;
-    margin-bottom: 10px;
+    color: var(--color-text);
+    font-size: var(--font-base);
+    line-height: var(--line-loose);
+    margin-bottom: var(--space-3);
 }
 .blog-post li {
-    margin-bottom: 30px;
+    margin-bottom: var(--space-9);
 }
 
 
 .blog-post li strong {
-    color: #333;
-    font-weight: 500;
+    color: var(--color-text);
+    font-weight: var(--weight-medium);
 }
 
 .blog-excerpt {
-    font-size: 1rem;
-    line-height: 1.9;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: var(--font-base);
+    line-height: var(--line-loose);
+    color: var(--color-text);
+    margin-bottom: var(--space-7);
 }
 /* Read more link */
 
 .read-more {
-    font-size: 0.95rem;
-    color: #333;
+    font-size: var(--font-reading-small);
+    color: var(--color-text);
     text-decoration: none;
     letter-spacing: 0.5px;
 }
@@ -454,31 +528,31 @@ color: #6b705c;
 .post-container {
     max-width: 920px;
     margin: auto;
-    padding: 100px 30px;
+    padding: var(--space-17) var(--space-9);
 }
 
 .blog-post h1 {
-    margin-bottom: 20px;
+    margin-bottom: var(--space-7);
 }
 
 .blog-post p,
 .blog-post ul {
-    margin-bottom: 10px;
+    margin-bottom: var(--space-3);
 }
 
 .blog-post p,
 .blog-post li {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: var(--font-lg);
+    line-height: var(--line-relaxed);
 }
 
 .blog-post li em {
     display: block;
-    margin-top: 5px;
+    margin-top: var(--space-1);
 }
 
 .blog-post li div {
-    margin-top: 5px;
+    margin-top: var(--space-1);
 }
 .blog-post:last-child,
 .blog-post p:last-child {
@@ -494,20 +568,20 @@ color: #6b705c;
 
 .quote-reference {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--font-caption);
   letter-spacing: 0.05em;
 }
 
 .quote-original {
   margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.6;
+  font-size: var(--font-quote);
+  line-height: var(--line-normal);
 }
 
 .quote-translation {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: var(--font-reading-small);
+  line-height: var(--line-normal);
 }
 /* Tab Function */
 
@@ -518,13 +592,13 @@ color: #6b705c;
 
 .tab-buttons {
     display: flex;
-    gap: 8px;
+    gap: var(--space-2);
     overflow-x: auto;
     position: sticky;
     top: 70px;
     z-index: 100;
-    margin-bottom: 30px;
-    padding: 10px 0;
+    margin-bottom: var(--space-9);
+    padding: var(--space-3) 0;
     background: white;
 }
 
@@ -532,7 +606,7 @@ color: #6b705c;
 .tab-button {
     background: none;
     border: none;
-    padding: 10px 16px;
+    padding: var(--space-3) 16px;
     cursor: pointer;
     white-space: nowrap;
     font: inherit;
@@ -555,8 +629,8 @@ color: #6b705c;
 .chapter-navigation {
     display: flex;
     justify-content: flex-end;
-    margin-top: 50px;
-    padding-top: 20px;
+    margin-top: var(--space-13);
+    padding-top: var(--space-7);
 }
 
 .chapter-navigation:has(button + button) {
@@ -566,14 +640,14 @@ color: #6b705c;
 .chapter-navigation button {
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: var(--font-base);
     cursor: pointer;
-    color: #555;
-    padding: 8px 0;
+    color: var(--color-text);
+    padding: var(--space-2) 0;
 }
 
 .chapter-navigation button:hover {
-    color: #000;
+    color: var(--color-heading);
 }
 
 /* <--- Img within Tab ---> */
@@ -581,11 +655,11 @@ color: #6b705c;
   max-width: 90%;
   height: auto;
   display: block;
-  margin: 20px auto;
+  margin: var(--space-7) auto;
 }
 .gita-diagram {
     display: block;
-    margin: 35px auto;
+    margin: var(--space-10) auto;
 }
 .tabs .relationship-map img {
   width: 100%;
@@ -602,11 +676,11 @@ color: #6b705c;
 
 .note-content {
     background-color: #f5f2ec;
-    padding: 15px;
+    padding: var(--space-5);
     display: none;
     border: 1px solid #ddd;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: var(--space-3);
 }
 
 .note-term:hover + .note-content {
@@ -617,12 +691,12 @@ color: #6b705c;
 .side-notes-intro {
   font-size: 0.9em;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-7);
 }
 .side-notes-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  gap: var(--space-8);
 }
 
 .side-notes h3 {
@@ -635,7 +709,7 @@ color: #6b705c;
 }
 
 .side-note-group p {
-  margin: 8px 0;
+  margin: var(--space-2) 0;
 }
 
 /* <--- Reflection Box ---> */
@@ -669,8 +743,8 @@ color: #6b705c;
 
 
 .feedback-section {
-    margin-top: 80px;
-    padding: 60px 30px;
+    margin-top: var(--space-16);
+    padding: var(--space-14) var(--space-9);
     background-color: #f5f2ec;
     border-radius: 16px;
 }
@@ -681,15 +755,15 @@ color: #6b705c;
 }
 
 .feedback-section h2 {
-    margin-bottom: 15px;
+    margin-bottom: var(--space-5);
     text-align: center;
 }
 
 .feedback-intro {
     max-width: 620px;
-    margin: 0 auto 40px;
+    margin: 0 auto var(--space-11);
     text-align: center;
-    line-height: 1.8;
+    line-height: var(--line-relaxed);
 }
 
 .feedback-form {
@@ -704,7 +778,7 @@ color: #6b705c;
 }
 
 .form-group label {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
 }
 
 .optional {
@@ -715,12 +789,11 @@ color: #6b705c;
 .feedback-form input,
 .feedback-form textarea {
     width: 100%;
-    box-sizing: border-box;
-    padding: 13px 15px;
+    padding: 13px var(--space-5);
     border: 1px solid #d8d3ca;
     border-radius: 8px;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: var(--font-base);
     background-color: #fff;
 }
 
@@ -737,11 +810,11 @@ color: #6b705c;
 
 .feedback-submit {
     align-self: flex-start;
-    padding: 12px 24px;
+    padding: var(--space-4) 24px;
     border: none;
     border-radius: 999px;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: var(--font-base);
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
@@ -760,22 +833,22 @@ color: #6b705c;
 
 
 .reference {
-    margin-top: 20px;
+    margin-top: var(--space-7);
     padding-top: 0px;
 }
 
 .reference h4 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 18px;
+    font-size: var(--font-subtitle);
+    font-weight: var(--weight-regular);
+    color: var(--color-heading);
+    margin-bottom: var(--space-6);
     letter-spacing: 0.5px;
 }
 
 .reference p {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: #777;
+    font-size: var(--font-small);
+    line-height: var(--line-relaxed);
+    color: var(--color-text);
     margin: 0;
 }
 
@@ -784,7 +857,7 @@ color: #6b705c;
 }
 
 .reference a {
-    color: #555;
+    color: var(--color-text);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: opacity 0.3s ease;
@@ -804,13 +877,13 @@ color: #6b705c;
 .content{
   width:80%;
   margin:auto;
-  padding-top:10px;
+  padding-top:var(--space-3);
   padding-bottom:0;
 }
 
 .content-col{
   flex-basis:48%;
-  padding: 30px 2px;
+  padding: var(--space-9) 2px;
 }
 
 .content-col img{
@@ -822,16 +895,16 @@ color: #6b705c;
 }
 
 .content-col p{
-  padding: 15px 0 25px;
-font-size: 1.125rem;
+  padding: var(--space-5) 0 var(--space-8);
+font-size: var(--font-lg);
 
 }
 .book-author {
-    font-size: 1.125rem;
-    color: #777;
+    font-size: var(--font-lg);
+    color: var(--color-text);
     font-style: italic;
     margin-top: -10px;
-    margin-bottom: 25px;
+    margin-bottom: var(--space-8);
 }
 /* ==========================
           About Page
@@ -848,22 +921,22 @@ font-size: 1.125rem;
   background-position: center;
   background-size: cover;
   text-align:center;
-  color:#fff
+  color:var(--color-white);
 }
 .sub-header h1{
-  margin-top:10px;
+  margin-top:var(--space-3);
 }
 
 .about-us{
   width:80%;
   margin:auto;
-  padding-top:80px;
+  padding-top:var(--space-16);
   padding-bottom:50px
 }
 
 .about-col{
   flex-basis:48%;
-  padding: 30px 2px;
+  padding: var(--space-9) 2px;
 }
 
 .about-col img{
@@ -874,17 +947,17 @@ font-size: 1.125rem;
 }
 
 .about-col p{
-  padding: 15px 0 25px;
+  padding: var(--space-5) 0 var(--space-8);
 }
 .yoga-journey {
     text-align: center;
-    margin-top: 20px;
-    padding: 20px 30px 40px;
+    margin-top: var(--space-7);
+    padding: var(--space-7) var(--space-9) var(--space-11);
 }
 
 .yoga-journey p {
-    margin-bottom: 5px;
-    line-height: 1.8;
+    margin-bottom: var(--space-1);
+    line-height: var(--line-relaxed);
 }
 
 .yoga-journey a {
@@ -909,7 +982,7 @@ font-size: 1.125rem;
 }
 
 .red-btn:hover{
-  color:#fff;
+  color:var(--color-white);
 }
 
 /* ==========================
@@ -940,37 +1013,37 @@ font-size: 1.125rem;
 
 .welcome-message {
     text-align: center;
-    padding: 30px;
+    padding: var(--space-9);
     max-width: 600px;
 }
 
 .welcome-message h2 {
-    font-size: 32px;
-    font-weight: 400;
-    color: #222;
-    margin-bottom: 18px;
+    font-size: var(--heading-sm);
+    font-weight: var(--weight-regular);
+    color: var(--color-heading);
+    margin-bottom: var(--space-6);
 }
 
 .welcome-message p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 12px;
+    font-size: var(--font-lg);
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
 }
 
 .welcome-message span {
-    font-size: 14px;
-    color: #777;
+    font-size: var(--font-sm);
+    color: var(--color-text);
 }
 
 .welcome-message button {
     display: block;
-    margin: 35px auto 0;
-    padding: 12px 30px;
+    margin: var(--space-10) auto 0;
+    padding: var(--space-4) var(--space-9);
     border: 1px solid #222;
     background: #222;
-    color: white;
+    color: var(--color-white);
     font-family: inherit;
-    font-size: 14px;
+    font-size: var(--font-sm);
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -986,24 +1059,24 @@ font-size: 1.125rem;
 .practice-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 120px 25px 100px;
-    color: #222;
+    padding: 120px var(--space-8) var(--space-17);
+    color: var(--color-text);
 }
 
 .practice-intro {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: var(--space-15);
 }
 
 .practice-intro h3 {
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 5px;
+    font-size: var(--heading-md);
+    font-weight: var(--weight-light);
+    margin-bottom: var(--space-1);
 }
 
 .practice-intro p {
     font-size: 15px;
-    color: #777;
+    color: var(--color-text);
     font-style: italic;
 }
 
@@ -1011,29 +1084,29 @@ font-size: 1.125rem;
 
 .practice-heading {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: var(--space-12);
 }
 
 .practice-label {
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #777;
-    margin-bottom: 15px;
+    color: var(--color-text);
+    margin-bottom: var(--space-5);
 }
 
 .practice-heading h1 {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 12px;
+    font-size: var(--heading-sm);
+    font-weight: var(--weight-regular);
+    margin-bottom: var(--space-4);
 }
 
 .practice-description {
     max-width: 560px;
     margin: auto;
-    color: #777;
-    font-size: 14px;
-    line-height: 1.8;
+    color: var(--color-text);
+    font-size: var(--font-sm);
+    line-height: var(--line-relaxed);
 }
 
 /* Breathing area */
@@ -1042,7 +1115,7 @@ font-size: 1.125rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px auto;
+    margin: var(--space-13) auto;
 }
 
 .breathing-square {
@@ -1079,44 +1152,44 @@ font-size: 1.125rem;
 }
 
 .breathing-phase {
-    margin-top: 30px;
-    font-size: 18px;
+    margin-top: var(--space-9);
+    font-size: var(--font-lg);
     letter-spacing: 1px;
 }
 
 .breathing-countdown {
-    font-size: 14px;
-    color: #888;
-    margin-top: 5px;
+    font-size: var(--font-sm);
+    color: var(--color-text);
+    margin-top: var(--space-1);
 }
 
 /* Settings */
 
 .breathing-settings {
     max-width: 520px;
-    margin: 60px auto 0;
-    padding: 30px;
+    margin: var(--space-14) auto 0;
+    padding: var(--space-9);
     border: 1px solid #ddd;
 }
 
 .breathing-settings h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 25px;
+    font-size: var(--font-xl);
+    font-weight: var(--weight-regular);
+    margin-bottom: var(--space-8);
 }
 
 .setting-group {
-    margin-bottom: 30px;
+    margin-bottom: var(--space-9);
 }
 
 .setting-group label {
     display: block;
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-4);
 }
 
 .setting-value {
-    font-weight: 600;
+    font-weight: var(--weight-semibold);
 }
 
 .setting-group input[type="range"] {
@@ -1126,12 +1199,12 @@ font-size: 1.125rem;
 
 .setting-options {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
 }
 
 .setting-options button {
-    padding: 9px 18px;
+    padding: 9px var(--space-6);
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
@@ -1141,7 +1214,7 @@ font-size: 1.125rem;
 
 .setting-options button.active {
     background: #222;
-    color: white;
+    color: var(--color-white);
     border-color: #222;
 }
 
@@ -1150,16 +1223,16 @@ font-size: 1.125rem;
 .breathing-controls {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 35px;
+    gap: var(--space-4);
+    margin-top: var(--space-10);
     flex-wrap: wrap;
 }
 
 .breathing-controls button {
-    padding: 12px 25px;
+    padding: var(--space-4) var(--space-8);
     border: 1px solid #222;
     background: white;
-    color: #222;
+    color: var(--color-text);
     cursor: pointer;
     font-family: inherit;
     font-size: 13px;
@@ -1168,7 +1241,7 @@ font-size: 1.125rem;
 
 .breathing-controls button.primary {
     background: #222;
-    color: white;
+    color: var(--color-white);
 }
 
 .breathing-controls button:hover {
@@ -1183,19 +1256,19 @@ font-size: 1.125rem;
 /* Session information */
 
 .breathing-progress {
-    margin-top: 25px;
+    margin-top: var(--space-8);
     text-align: center;
     font-size: 13px;
-    color: #888;
+    color: var(--color-text);
 }
 
 .breathing-reminder {
     max-width: 520px;
-    margin: 45px auto 0;
+    margin: var(--space-12) auto 0;
     text-align: center;
-    font-size: 12px;
-    line-height: 1.8;
-    color: #888;
+    font-size: var(--font-xs);
+    line-height: var(--line-relaxed);
+    color: var(--color-text);
 }
 
 /* Mobile */
@@ -1209,7 +1282,7 @@ font-size: 1.125rem;
 .location{
   width:80%;
   margin:auto;
-  padding-top:80px 0;
+  padding-top:var(--space-16) 0;
 }
 
 .location iframe{
@@ -1224,29 +1297,29 @@ font-size: 1.125rem;
 
 .contact-col{
   flex-basis:48%;
-  padding-bottom: 30px;
+  padding-bottom: var(--space-9);
 }
 .contact-col div{
   display:flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-11);
 }
 
 .contact-col div .fa-solid{
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #f44336;
-  margin: 10px;
-  margin-right: 30px;
+  margin: var(--space-3);
+  margin-right: var(--space-9);
 }
 
 .contact-col div p{
   padding:0;
 }
 .contact-col div h5{
-  font-size:20px;
-  color:#555;
-  margin-bottom:5px;
-  font-weight:500px;
+  font-size:var(--font-xl);
+  color:var(--color-heading);
+  margin-bottom:var(--space-1);
+  font-weight:var(--weight-medium);
 }
 
 /* =================================
@@ -1261,7 +1334,7 @@ font-size: 1.125rem;
         display:none;
     }
 nav.scrolled .dropbtn {
-    color: #333;
+    color: var(--color-text);
 }
     .dropdown{
         display:block;
@@ -1269,7 +1342,7 @@ nav.scrolled .dropbtn {
     }
 
     nav{
-        padding:15px 20px;
+        padding:var(--space-5) var(--space-7);
     }
 
     nav img{
@@ -1284,7 +1357,7 @@ nav.scrolled .dropbtn {
     /* Blog listing adjustments */
 
 .blog-header {
-        margin: 90px auto 60px;
+        margin: 90px auto var(--space-14);
     }
 
     .blog-header h1 {
@@ -1292,15 +1365,15 @@ nav.scrolled .dropbtn {
     }
 
     .blog-subtitle {
-        font-size: 1rem;
+        font-size: var(--font-base);
     }
 
     .blog-post {
-        padding: 35px 0;
+        padding: var(--space-10) 0;
     }
 
     .blog-post h2 {
-        font-size: 1.5rem;
+        font-size: var(--font-2xl);
     }
 
 }
@@ -1315,7 +1388,7 @@ nav.scrolled .dropbtn {
     /* Article container adjustments */
 
 .post-container {
-        padding: 60px 20px;
+        padding: var(--space-14) var(--space-7);
     }
 
 }
@@ -1326,8 +1399,8 @@ nav.scrolled .dropbtn {
     /* Feedback section adjustments */
 
 .feedback-section {
-        margin-top: 60px;
-        padding: 45px 20px;
+        margin-top: var(--space-14);
+        padding: var(--space-12) var(--space-7);
         border-radius: 12px;
     }
 
@@ -1338,15 +1411,15 @@ nav.scrolled .dropbtn {
     /* Breathing practice adjustments */
 
 .practice-container {
-        padding: 100px 20px 70px;
+        padding: var(--space-17) var(--space-7) var(--space-15);
     }
 
     .practice-intro {
-        margin-bottom: 50px;
+        margin-bottom: var(--space-13);
     }
 
     .practice-intro h3 {
-        font-size: 32px;
+        font-size: var(--heading-sm);
     }
 
     .practice-heading h1 {
@@ -1363,11 +1436,11 @@ nav.scrolled .dropbtn {
     }
 
     .breathing-controls {
-        gap: 8px;
+        gap: var(--space-2);
     }
 
     .breathing-controls button {
-        padding: 11px 18px;
+        padding: 11px var(--space-6);
     }
 
 }
