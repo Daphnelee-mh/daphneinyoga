@@ -1,9 +1,27 @@
+
+/* =================================
+   GLOBAL RESET & TYPOGRAPHY
+================================= */
 *{
     margin: 0;
     padding: 0;
    font-family: 'Open Sans', Arial, sans-serif;
 
 }
+/* Global paragraph defaults */
+p {
+    color: #777;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+}
+
+/* =================================
+   HERO / PAGE HEADERS
+================================= */
+
 .header{
   min-height:80vh;
   width:100%;
@@ -16,11 +34,10 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(assets/images/kaa2025writing.jpg);
   background-position: center;
 }
-p {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
-}
+/* =================================
+   NAVIGATION
+================================= */
+
 .logo{
     color:#fff;
     text-decoration:none;
@@ -150,6 +167,10 @@ nav img{
 .dropdown-content.show{
     display:block;
 }
+/* =================================
+   HERO CONTENT & BUTTONS
+================================= */
+
 .text-box {
     width: 90%;
     color: #fff;
@@ -188,28 +209,10 @@ nav img{
     border: 1px solid #fff;
     background: #000000;
 }
+/* =================================
+   HOMEPAGE SECTIONS
+================================= */
 
-@media(max-width:800px){
-
-    .nav-links{
-        display:none;
-    }
-nav.scrolled .dropbtn {
-    color: #333;
-}
-    .dropdown{
-        display:block;
-        margin-left:auto;
-    }
-
-    nav{
-        padding:15px 20px;
-    }
-
-    nav img{
-        width:180px;
-    }
-}
 .intro{
   width:80%;
   margin:auto;
@@ -225,25 +228,12 @@ h3{
   font-size:40px;
   font-weight:300;
 }
-p{
-  color:#777;
-  font-size:1.125rem;
-  font-weight:300;
-  line-height:1.6;
-  padding:10px;
-}
 .row{
   margin-top:5%;
   display:flex;
   justify-content:space-between;
 
 }
-
-
-@media(max-width:700px){
-  .row{
-    flex-direction:column;
-  }}
 .core-value{
   width:80%;
   margin:auto;
@@ -276,6 +266,10 @@ p{
   text-decoration:none;
   color:black;
 }
+/* =================================
+   FOOTER & SOCIAL ICONS
+================================= */
+
 
 
 .footer{
@@ -321,6 +315,10 @@ color: #6b705c;
 /* ==========================
    Blog Page - The Art of Weaving
    ========================== */
+/* =================================
+   BLOG LISTING PAGE
+================================= */
+
 .blog-card h2 a,
 .blog-card h2 a:visited,
 .blog-card h2 a:hover,
@@ -356,13 +354,12 @@ color: #6b705c;
     max-width: 920px;
     margin: 0 auto;
     padding: 0 25px 100px;
-}
-
-
-.blog-post {
+}.blog-post {
     padding: 45px 0;
     border-bottom: 1px solid #e8e8e8;
+    line-height: 1.8;
 }
+
 
 .back-blog {
     display: inline-block;
@@ -407,18 +404,18 @@ color: #6b705c;
 
 .blog-section h4 {
     margin-bottom: 8px;
-}
-.blog-post ul {
+}.blog-post ul {
     margin: 25px 0;
-    padding-left: 25px;
+    padding-left: 1.5rem;
     color: #555;
     font-size: 1rem;
     line-height: 1.9;
+    margin-bottom: 10px;
+}
+.blog-post li {
+    margin-bottom: 30px;
 }
 
-.blog-post li {
-    margin-bottom: 12px;
-}
 
 .blog-post li strong {
     color: #333;
@@ -447,40 +444,17 @@ color: #6b705c;
 
 
 /* Mobile */
-
-@media (max-width: 768px) {
-
-    .blog-header {
-        margin: 90px auto 60px;
-    }
-
-    .blog-header h1 {
-        font-size: 2.2rem;
-    }
-
-    .blog-subtitle {
-        font-size: 1rem;
-    }
-
-    .blog-post {
-        padding: 35px 0;
-    }
-
-    .blog-post h2 {
-        font-size: 1.5rem;
-    }
-}
 /* ==========================
             Blog Post
    ========================== */
+/* =================================
+   BLOG ARTICLE & GITA CONTENT
+================================= */
+
 .post-container {
     max-width: 920px;
     margin: auto;
     padding: 100px 30px;
-}
-
-.blog-post {
-    line-height: 1.8;
 }
 
 .blog-post h1 {
@@ -496,14 +470,6 @@ color: #6b705c;
 .blog-post li {
     font-size: 18px;
     line-height: 1.8;
-}
-
-.blog-post ul {
-    padding-left: 1.5rem;
-}
-
-.blog-post li {
-    margin-bottom: 30px;
 }
 
 .blog-post li em {
@@ -697,6 +663,10 @@ color: #6b705c;
 /* =========================
    Share Your Perspective
 ========================= */
+/* =================================
+   FEEDBACK FORM
+================================= */
+
 
 .feedback-section {
     margin-top: 80px;
@@ -783,21 +753,11 @@ color: #6b705c;
 
 /* Mobile */
 
-@media (max-width: 600px) {
-
-    .feedback-section {
-        margin-top: 60px;
-        padding: 45px 20px;
-        border-radius: 12px;
-    }
-
-    .feedback-submit {
-        width: 100%;
-    }
-
-}
-
 /* Reference Section */
+/* =================================
+   REFERENCES
+================================= */
+
 
 .reference {
     margin-top: 20px;
@@ -833,17 +793,13 @@ color: #6b705c;
 .reference a:hover {
     opacity: 0.65;
 }
-
-@media(max-width:700px){
-
-    .post-container {
-        padding: 60px 20px;
-    }
-
-}
 /* ==========================
    Reading Page - The Art of Seeing
    ========================== */
+/* =================================
+   READING PAGE
+================================= */
+
 
 .content{
   width:80%;
@@ -880,6 +836,10 @@ font-size: 1.125rem;
 /* ==========================
           About Page
    ========================== */
+/* =================================
+   ABOUT PAGE
+================================= */
+
 
 .sub-header{
   height:50vh;
@@ -956,6 +916,10 @@ font-size: 1.125rem;
    Practice Page 
    ========================== */
 /* ----- Breathing Practice Welcome Screen ----- */
+/* =================================
+   BREATHING PRACTICE PAGE
+================================= */
+
 
 .welcome-overlay {
     position: fixed;
@@ -1236,43 +1200,11 @@ font-size: 1.125rem;
 
 /* Mobile */
 
-@media (max-width: 600px) {
-
-    .practice-container {
-        padding: 100px 20px 70px;
-    }
-
-    .practice-intro {
-        margin-bottom: 50px;
-    }
-
-    .practice-intro h3 {
-        font-size: 32px;
-    }
-
-    .practice-heading h1 {
-        font-size: 27px;
-    }
-
-    .breathing-square {
-        width: 220px;
-        height: 220px;
-    }
-
-    .breathing-settings {
-        padding: 22px;
-    }
-
-    .breathing-controls {
-        gap: 8px;
-    }
-
-    .breathing-controls button {
-        padding: 11px 18px;
-    }
-}
-
 /*---------------contact us page ---------------*/
+/* =================================
+   CONTACT PAGE
+================================= */
+
 
 .location{
   width:80%;
@@ -1315,4 +1247,127 @@ font-size: 1.125rem;
   color:#555;
   margin-bottom:5px;
   font-weight:500px;
+}
+
+/* =================================
+   RESPONSIVE STYLES
+   Existing breakpoints retained; matching breakpoints grouped
+================================= */
+
+
+@media (max-width: 800px) {
+
+.nav-links{
+        display:none;
+    }
+nav.scrolled .dropbtn {
+    color: #333;
+}
+    .dropdown{
+        display:block;
+        margin-left:auto;
+    }
+
+    nav{
+        padding:15px 20px;
+    }
+
+    nav img{
+        width:180px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    /* Blog listing adjustments */
+
+.blog-header {
+        margin: 90px auto 60px;
+    }
+
+    .blog-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .blog-subtitle {
+        font-size: 1rem;
+    }
+
+    .blog-post {
+        padding: 35px 0;
+    }
+
+    .blog-post h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+.row{
+    flex-direction:column;
+  }
+
+    /* Article container adjustments */
+
+.post-container {
+        padding: 60px 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* Feedback section adjustments */
+
+.feedback-section {
+        margin-top: 60px;
+        padding: 45px 20px;
+        border-radius: 12px;
+    }
+
+    .feedback-submit {
+        width: 100%;
+    }
+
+    /* Breathing practice adjustments */
+
+.practice-container {
+        padding: 100px 20px 70px;
+    }
+
+    .practice-intro {
+        margin-bottom: 50px;
+    }
+
+    .practice-intro h3 {
+        font-size: 32px;
+    }
+
+    .practice-heading h1 {
+        font-size: 27px;
+    }
+
+    .breathing-square {
+        width: 220px;
+        height: 220px;
+    }
+
+    .breathing-settings {
+        padding: 22px;
+    }
+
+    .breathing-controls {
+        gap: 8px;
+    }
+
+    .breathing-controls button {
+        padding: 11px 18px;
+    }
+
 }
