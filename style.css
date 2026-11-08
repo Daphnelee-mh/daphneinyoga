@@ -507,6 +507,43 @@ color: #6b705c;
     color: var(--color-text);
     margin-bottom: var(--space-7);
 }
+
+/* Blog General content table */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: var(--space-5) 0 var(--space-7);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+}
+
+.content-table th,
+.content-table td {
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid var(--color-border);
+}
+
+.content-table th {
+    color: var(--color-heading);
+    background: var(--color-white);
+    font-weight: 600;
+}
+
+.content-table td {
+    color: var(--color-text);
+}
+
+.content-table td:first-child {
+    width: 40%;
+}
+
+.content-table td:last-child {
+    width: 60%;
+}
+
 /* Read more link */
 
 .read-more {
@@ -1330,6 +1367,9 @@ font-size: var(--font-lg);
   font-weight:var(--weight-medium);
 }
 
+
+
+
 /* =================================
    RESPONSIVE STYLES
    Existing breakpoints retained; matching breakpoints grouped
@@ -1450,5 +1490,10 @@ nav.scrolled .dropbtn {
     .breathing-controls button {
         padding: 11px var(--space-6);
     }
-
+/* General content table */
+ .content-table th,
+    .content-table td {
+        padding: 12px 10px;
+        font-size: var(--fs-sm);
+    }
 }
