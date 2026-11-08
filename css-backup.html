@@ -20,12 +20,14 @@
     --font-link: 1.2rem;
     --font-quote: 1.15rem;
 
-    /* Heading sizes */
-    --heading-sm: 2rem;       /* 32px */
-    --heading-md: 2.5rem;     /* 40px */
-    --heading-article: 1.8rem;
-    --heading-lg: 2.8rem;     /* Blog display heading */
-    --heading-xl: 3.25rem;    /* 52px */
+  /* Heading scale */
+   --heading-h1: 3.25rem;    /* 52px */
+   --heading-h2: 2.5rem;     /* 40px */
+   --heading-h3: 2rem;       /* 32px */
+   --heading-h4: 1.5rem;     /* 24px */
+   --heading-h5: 1.25rem;    /* 20px */
+   --heading-h6: 1.125rem;   /* 18px */
+
 
     /* Font weights */
     --weight-light: 300;
@@ -87,6 +89,14 @@ button, input, textarea, select {
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
 }
+
+/* Global heading styles */
+h1 { font-size: var(--heading-h1); }
+h2 { font-size: var(--heading-h2); }
+h3 { font-size: var(--heading-h3); }
+h4 { font-size: var(--heading-h4); }
+h5 { font-size: var(--heading-h5); }
+h6 { font-size: var(--heading-h6); }
 
 /* Global paragraph defaults */
 p {
