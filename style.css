@@ -821,6 +821,7 @@ color: #6b705c;
 
 /* Verse reference */
 .content-toggle .verse-range {
+    justify-self: end;
     font-size: var(--font-sm);
     font-weight: var(--weight-regular);
     color: var(--color-text);
