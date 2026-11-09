@@ -261,7 +261,8 @@ nav img {
 }
 
 .text-box h1 { 
-  font-size: var(--heading-xl);
+   color: var(--color-white);
+
 }
 .text-box h3 { 
   color: var(--color-white);
