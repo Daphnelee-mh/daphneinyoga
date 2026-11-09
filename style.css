@@ -262,6 +262,7 @@ nav img {
 
 .text-box h1 { 
    color: var(--color-white);
+   font-weight: normal;
 
 }
 .text-box h3 { 
