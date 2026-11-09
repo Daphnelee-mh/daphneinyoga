@@ -1138,8 +1138,8 @@ font-size: var(--font-lg);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
-.welcome-message h2 {
-    font-size: var(--heading-sm);
+.welcome-message h3 {
+    font-size: var(--heading-h3);
     font-weight: var(--weight-regular);
     color: var(--color-heading);
     margin-bottom: var(--space-6);
@@ -1190,7 +1190,7 @@ font-size: var(--font-lg);
 }
 
 .practice-intro h3 {
-    font-size: var(--heading-md);
+    font-size: var(--heading-h3);
     font-weight: var(--weight-light);
     margin-bottom: var(--space-1);
 }
@@ -1216,8 +1216,8 @@ font-size: var(--font-lg);
     margin-bottom: var(--space-5);
 }
 
-.practice-heading h1 {
-    font-size: var(--heading-sm);
+.practice-heading h3 {
+    font-size: var(--heading-h3);
     font-weight: var(--weight-regular);
     margin-bottom: var(--space-4);
 }
@@ -1484,20 +1484,12 @@ nav.scrolled .dropbtn {
         margin: 90px auto var(--space-14);
     }
 
-    .blog-header h1 {
-        font-size: 2.2rem;
-    }
-
     .blog-subtitle {
         font-size: var(--font-base);
     }
 
     .blog-post {
         padding: var(--space-10) 0;
-    }
-
-    .blog-post h2 {
-        font-size: var(--font-2xl);
     }
 
 }
