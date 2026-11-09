@@ -457,7 +457,7 @@ color: #6b705c;
 }
 
 .blog-date {
-    font-size: var(--font-xs);
+    font-size: var(--font-sm);
     color: var(--color-text);
     letter-spacing: 1px;
     margin-bottom: var(--space-5);
