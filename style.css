@@ -639,6 +639,11 @@ color: #6b705c;
     display: block;
 }
 
+.tab-content.active h3 {
+    font-size:var(--heading-h3);
+}
+
+
 .chapter-navigation {
     display: flex;
     justify-content: flex-end;
