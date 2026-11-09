@@ -87,6 +87,13 @@ button, input, textarea, select {
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
 }
+/* Global heading styles */
+h1 { font-size: var(--heading-h1); }
+h2 { font-size: var(--heading-h2); }
+h3 { font-size: var(--heading-h3); }
+h4 { font-size: var(--heading-h4); }
+h5 { font-size: var(--heading-h5); }
+h6 { font-size: var(--heading-h6); }
 
 /* Global paragraph defaults */
 p {
