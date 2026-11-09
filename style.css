@@ -36,8 +36,8 @@
     --line-loose: 1.9;
 
     /* Colours */
-    --color-heading: #000;
-    --color-text: #555;
+    --color-heading: #000; 
+    --color-text: #555; /* light grey */
     --color-white: #fff;
 
     /* Spacing */
