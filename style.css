@@ -464,6 +464,9 @@ color: #6b705c;
     margin-bottom: var(--space-5);
 }
 
+.blog-card h2 {
+    font-weight: var(--weight-semibold);
+}
 
 .blog-post h2 {
     font-weight: var(--weight-regular);
