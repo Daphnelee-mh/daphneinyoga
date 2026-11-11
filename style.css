@@ -465,7 +465,7 @@ color: #6b705c;
 }
 
 .blog-card h2 {
-    font-weight: var(--weight-semibold);
+    font-weight: var(--weight-medium);
 }
 
 .blog-post h2 {
