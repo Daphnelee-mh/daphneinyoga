@@ -1,105 +1,258 @@
-/* =================================
-   DESIGN TOKENS
-   Shared values for typography, colour and spacing
-================================= */
+/* =================================================================
+   DAPHNEINYOGA: TYPOGRAPHY + SPACING SYSTEM
+   Replaces everything in style.css from the top down to (but not
+   including) the "HERO / PAGE HEADERS" comment (~line 105).
+   Keeps your existing look: Open Sans, same colours, calm and light.
+================================================================= */
+
 :root {
-    /* Font family */
+    /* ---------- Font ---------- */
     --font-primary: 'Open Sans', Arial, sans-serif;
 
-    /* Font sizes */
-    --font-xs: 0.75rem;       /* 12px */
-    --font-sm: 0.875rem;      /* 14px */
-    --font-base: 1rem;        /* 16px */
-    --font-lg: 1.125rem;      /* 18px */
-    --font-xl: 1.25rem;       /* 20px */
-    --font-2xl: 1.5rem;       /* 24px */
-
-
-   /* Heading scale */
-   --heading-h1: 3.25rem;    /* 52px */
-   --heading-h2: 2.5rem;     /* 40px */
-   --heading-h3: 2rem;       /* 32px */
-   --heading-h4: 1.5rem;     /* 24px */
-   --heading-h5: 1.25rem;    /* 20px */
-   --heading-h6: 1.125rem;   /* 18px */
-
-    /* Font weights */
-    --weight-light: 300;
+    /* ---------- Weights (only these three are loaded) ---------- */
     --weight-regular: 400;
     --weight-medium: 500;
     --weight-semibold: 600;
 
-    /* Line heights */
-    --line-tight: 1.3;
-    --line-normal: 1.6;
-    --line-relaxed: 1.8;
-    --line-loose: 1.9;
+    /* ---------- Text sizes (body and UI text) ---------- */
+    --text-xs: 0.8125rem;    /* 13px  captions, footer small print */
+    --text-sm: 0.9375rem;    /* 15px  nav, buttons, labels */
+    --text-base: 1.125rem;   /* 18px  body copy */
+    --text-lg: 1.25rem;      /* 20px  intro paragraphs, quotes */
 
-    /* Colours */
-    --color-heading: #000; 
-    --color-text: #555; /* light grey */
+    /* ---------- Heading sizes (fluid: shrink on phones) ---------- */
+    --text-h1: clamp(2.25rem, 1.6rem + 2.6vw, 3.25rem);    /* 36 to 52px */
+    --text-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);    /* 28 to 36px */
+    --text-h3: clamp(1.375rem, 1.2rem + 0.7vw, 1.625rem);  /* 22 to 26px */
+    --text-h4: 1.25rem;                                    /* 20px */
+    --text-h5: 1.125rem;                                   /* 18px */
+    --text-h6: 1rem;                                       /* 16px */
+
+    /* ---------- Line heights (three only) ---------- */
+    --leading-tight: 1.2;    /* h1, h2 */
+    --leading-snug: 1.35;    /* h3 to h6, nav, buttons */
+    --leading-body: 1.6;     /* paragraphs, lists */
+
+    /* ---------- Spacing scale (rem, 4px base) ---------- */
+    --space-3xs: 0.25rem;    /*   4px */
+    --space-2xs: 0.5rem;     /*   8px */
+    --space-xs: 0.75rem;     /*  12px */
+    --space-sm: 1rem;        /*  16px */
+    --space-md: 1.25rem;     /*  20px */
+    --space-lg: 1.75rem;     /*  28px */
+    --space-xl: 2.5rem;      /*  40px */
+    --space-2xl: 3.5rem;     /*  56px */
+
+    /* Vertical padding between full-width page sections (fluid) */
+    --space-section: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+
+    /* ---------- Reading widths ---------- */
+    --width-prose: 65ch;     /* blog posts, long text */
+    --width-narrow: 34rem;   /* forms, cards, settings panels */
+    --width-page: 62.5rem;   /* 1000px page container */
+
+    /* ---------- Colours (unchanged, plus the border that was missing) ---------- */
+    --color-heading: #000;
+    --color-text: #555;
     --color-white: #fff;
-
-    /* Spacing */
-    --space-1: 5px;
-    --space-2: 8px;
-    --space-3: 10px;
-    --space-4: 12px;
-    --space-5: 15px;
-    --space-6: 18px;
-    --space-7: 20px;
-    --space-8: 25px;
-    --space-9: 30px;
-    --space-10: 35px;
-    --space-11: 40px;
-    --space-12: 45px;
-    --space-13: 50px;
-    --space-14: 60px;
-    --space-15: 70px;
-    --space-16: 80px;
-    --space-17: 100px;
+    --color-border: #ddd;
 }
 
 
-/* =================================
-   GLOBAL RESET & TYPOGRAPHY
-================================= */
+/* =================================================================
+   LEGACY BRIDGE
+   Your old token names now point at the new scale, so the whole
+   site snaps to the system without editing every rule. Delete this
+   block once you have replaced the old names in the rest of the CSS.
+================================================================= */
+:root {
+    /* old spacing steps -> new scale */
+    --space-1: var(--space-3xs);   /* 5px   */
+    --space-2: var(--space-2xs);   /* 8px   */
+    --space-3: var(--space-2xs);   /* 10px  */
+    --space-4: var(--space-xs);    /* 12px  */
+    --space-5: var(--space-sm);    /* 15px  */
+    --space-6: var(--space-sm);    /* 18px  */
+    --space-7: var(--space-md);    /* 20px  */
+    --space-8: var(--space-md);    /* 25px  */
+    --space-9: var(--space-lg);    /* 30px  */
+    --space-10: var(--space-lg);   /* 35px  */
+    --space-11: var(--space-lg);   /* 40px  */
+    --space-12: var(--space-xl);   /* 45px  */
+    --space-13: var(--space-xl);   /* 50px  */
+    --space-14: var(--space-xl);   /* 60px  */
+    --space-15: var(--space-2xl);  /* 70px  */
+    --space-16: var(--space-2xl);  /* 80px  */
+    --space-17: var(--space-2xl);  /* 100px (page top/bottom) */
+
+    /* old heading names -> new sizes */
+    --heading-h1: var(--text-h1);
+    --heading-h2: var(--text-h2);
+    --heading-h3: var(--text-h3);
+    --heading-h4: var(--text-h4);
+    --heading-h5: var(--text-h5);
+    --heading-h6: var(--text-h6);
+
+    /* old text sizes -> new sizes */
+    --font-xs: var(--text-xs);
+    --font-sm: var(--text-sm);
+    --font-base: var(--text-sm);
+    --font-lg: var(--text-base);
+    --font-xl: var(--text-lg);
+    --font-2xl: var(--text-h4);
+
+    /* old line heights -> new */
+    --line-tight: var(--leading-tight);
+    --line-normal: var(--leading-body);
+    --line-relaxed: var(--leading-body);
+    --line-loose: var(--leading-body);
+
+    /* old weights -> new (light 300 was hard to read in grey) */
+    --weight-light: var(--weight-regular);
+
+    /* Names your CSS used but never defined (they silently did nothing) */
+    --fs-sm: var(--text-sm);
+    --fs-base: var(--text-base);
+    --font-subtitle: var(--text-lg);
+    --heading-sm: var(--text-h4);
+    --heading-md: var(--text-h3);
+    --heading-lg: var(--text-h2);
+}
+
+
+/* =================================================================
+   RESET + BASE
+================================================================= */
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--weight-regular);
+    line-height: var(--leading-body);
     color: var(--color-text);
 }
 
-/* Keep form controls consistent with the site typography */
 button, input, textarea, select {
     font: inherit;
 }
 
-/* Global heading defaults */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =================================================================
+   HEADING HIERARCHY
+   One h1 per page. h2 = page sections. h3 = subsections.
+   h4 to h6 = small labels. Choose the tag by structure, never by size.
+================================================================= */
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
+    text-wrap: balance;
 }
-/* Global heading styles */
-h1 { font-size: var(--heading-h1); }
-h2 { font-size: var(--heading-h2); }
-h3 { font-size: var(--heading-h3); }
-h4 { font-size: var(--heading-h4); }
-h5 { font-size: var(--heading-h5); }
-h6 { font-size: var(--heading-h6); }
 
-/* Global paragraph defaults */
+h1 { font-size: var(--text-h1); font-weight: var(--weight-medium);   line-height: var(--leading-tight); }
+h2 { font-size: var(--text-h2); font-weight: var(--weight-medium);   line-height: var(--leading-tight); }
+h3 { font-size: var(--text-h3); font-weight: var(--weight-medium);   line-height: var(--leading-snug); }
+h4 { font-size: var(--text-h4); font-weight: var(--weight-semibold); line-height: var(--leading-snug); }
+h5 { font-size: var(--text-h5); font-weight: var(--weight-semibold); line-height: var(--leading-snug); }
+h6 { font-size: var(--text-h6); font-weight: var(--weight-semibold); line-height: var(--leading-snug); }
+
+
+/* =================================================================
+   PARAGRAPHS AND LISTS
+   No padding on <p>. Spacing comes from the .flow rule below, so
+   gaps never stack or fight each other.
+================================================================= */
 p {
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
     color: var(--color-text);
-    font-size: var(--font-lg);
-    font-weight: var(--weight-light);
-    line-height: var(--line-normal);
-    padding: var(--space-3);
-    margin-bottom: 1.25rem;
 }
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li + li {
+    margin-top: var(--space-2xs);
+}
+
+.lead {
+    font-size: var(--text-lg);
+}
+
+.caption {
+    font-size: var(--text-xs);
+}
+
+
+/* =================================================================
+   VERTICAL RHYTHM
+   Every direct child of these containers gets the same gap above it.
+   Headings get more, so each section visibly belongs to its heading.
+   Add class="flow" to any new text container, or add its class to
+   the list below.
+================================================================= */
+:is(.flow, .tab-content, .content-toggle-content, .reflection-box,
+    .side-note-group, .reference, .core-value, .content-col, .about-col) > * + * {
+    margin-top: var(--space-sm);
+}
+
+:is(.flow, .tab-content, .content-toggle-content, .reflection-box,
+    .side-note-group, .reference, .core-value, .content-col, .about-col) > h2 {
+    margin-top: var(--space-xl);
+}
+
+:is(.flow, .tab-content, .content-toggle-content, .reflection-box,
+    .side-note-group, .reference, .core-value, .content-col, .about-col) > h3 {
+    margin-top: var(--space-lg);
+}
+
+:is(.flow, .tab-content, .content-toggle-content, .reflection-box,
+    .side-note-group, .reference, .core-value, .content-col, .about-col) > :is(h4, h5, h6) {
+    margin-top: var(--space-md);
+}
+
+/* a heading hugs the text below it */
+:is(.flow, .tab-content, .content-toggle-content, .reflection-box,
+    .side-note-group, .reference, .core-value, .content-col, .about-col)
+    > :is(h1, h2, h3, h4, h5, h6) + * {
+    margin-top: var(--space-2xs);
+}
+
+
+/* =================================================================
+   LAYOUT HELPERS
+================================================================= */
+.container {
+    width: min(100% - 2 * var(--space-md), var(--width-page));
+    margin-inline: auto;
+}
+
+.prose {
+    max-width: var(--width-prose);
+    margin-inline: auto;
+}
+
+.narrow {
+    max-width: var(--width-narrow);
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--space-section);
+}
+
 
 /* =================================
    HERO / PAGE HEADERS
@@ -260,10 +413,8 @@ nav img {
     max-width: 800px;
 }
 
-.text-box h1 { 
+.text-box h1 {
    color: var(--color-white);
-   font-weight: normal;
-
 }
 .text-box h3 { 
   color: var(--color-white);
@@ -307,10 +458,6 @@ nav img {
 
 }
 
-h3{
-  font-size:var(--heading-md);
-  font-weight:var(--weight-light);
-}
 .row{
   margin-top:5%;
   display:flex;
@@ -359,11 +506,6 @@ h3{
   width:100%;
   text-align:center;
   padding:var(--space-9) 0;
-}
-.footer h4{
-  margin-bottom: var(--space-5);
-  margin-top:var(--space-7);
-  font-weight:var(--weight-semibold);
 }
 
 .icons a {
@@ -417,10 +559,7 @@ color: #6b705c;
 }
 
 .blog-header h1 {
-    font-size: var(--heading-lg);
-    font-weight: var(--weight-regular);
-    letter-spacing: 0.5px;
-    margin-bottom: var(--space-7);
+    margin-bottom: var(--space-md);
 }
 
 .blog-subtitle {
@@ -441,7 +580,6 @@ color: #6b705c;
 }.blog-post {
     padding: var(--space-12) 0;
     border-bottom: 1px solid #e8e8e8;
-    line-height: var(--line-relaxed);
 }
 
 
@@ -465,19 +603,6 @@ color: #6b705c;
     margin-bottom: var(--space-5);
 }
 
-.blog-card h2 {
-    font-weight: var(--weight-medium);
-}
-
-.blog-post h1 {
-    font-weight: var(--weight-semibold);
-}
-
-.blog-post h2 {
-    font-weight: var(--weight-regular);
-    margin-bottom: var(--space-5);
-}
-
 
 .blog-post h2 a {
     color: var(--color-heading);
@@ -496,12 +621,7 @@ color: #6b705c;
     margin-bottom: var(--space-2);
 
 }.blog-post ul {
-    margin: var(--space-8) 0;
-    padding-left: 1.5rem;
     color: var(--color-text);
-    font-size: var(--font-base);
-    line-height: var(--line-loose);
-    margin-bottom: var(--space-3);
 }
 .blog-post li {
     margin-bottom: var(--space-9);
@@ -551,21 +671,6 @@ color: #6b705c;
     padding: var(--space-17) var(--space-9);
 }
 
-.blog-post h1 {
-    margin-bottom: var(--space-7);
-}
-
-.blog-post p,
-.blog-post ul {
-    margin-bottom: var(--space-3);
-}
-
-.blog-post p,
-.blog-post li {
-    font-size: var(--font-lg);
-    line-height: var(--line-relaxed);
-}
-
 .blog-post li em {
     display: block;
     margin-top: var(--space-1);
@@ -586,20 +691,21 @@ color: #6b705c;
   border-left: 2px solid #888;
 }
 
+.quote > * + * {
+  margin-top: var(--space-2xs);
+}
+
 .quote-reference {
-  margin: 0;
   font-size: var(--font-xs);
   letter-spacing: 0.05em;
 }
 
 .quote-original {
-  margin: 0;
   font-size: var(--font-lg);
   line-height: var(--line-normal);
 }
 
 .quote-translation {
-  margin: 0;
   font-size: var(--font-base);
   line-height: var(--line-normal);
 }
@@ -644,10 +750,6 @@ color: #6b705c;
 
 .tab-content.active {
     display: block;
-}
-
-.tab-content.active h3 {
-    font-size:var(--heading-h3);
 }
 
 
@@ -964,23 +1066,13 @@ color: #6b705c;
 
 
 .reference {
-    margin-top: var(--space-7);
-    padding-top: 0px;
-}
-
-.reference h4 {
-    font-size: var(--font-lg);
-    font-weight: var(--weight-regular);
-    color: var(--color-heading);
-    margin-bottom: var(--space-6);
-    letter-spacing: 0.5px;
+    margin-top: var(--space-xl);
 }
 
 .reference p {
     font-size: var(--font-sm);
     line-height: var(--line-relaxed);
     color: var(--color-text);
-    margin: 0;
 }
 
 .reference em {
@@ -1025,11 +1117,6 @@ color: #6b705c;
   padding-top:0;
 }
 
-.content-col p{
-  padding: var(--space-5) 0 var(--space-8);
-font-size: var(--font-lg);
-
-}
 .book-author {
     font-size: var(--font-lg);
     color: var(--color-text);
@@ -1077,9 +1164,6 @@ font-size: var(--font-lg);
   padding-top:0;
 }
 
-.about-col p{
-  padding: var(--space-5) 0 var(--space-8);
-}
 .yoga-journey {
     text-align: center;
     margin-top: var(--space-7);
@@ -1151,11 +1235,8 @@ font-size: var(--font-lg);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
-.welcome-message h3 {
-    font-size: var(--heading-h3);
-    font-weight: var(--weight-regular);
-    color: var(--color-heading);
-    margin-bottom: var(--space-6);
+.welcome-message h2 {
+    margin-bottom: var(--space-sm);
 }
 
 .welcome-message p {
@@ -1202,10 +1283,12 @@ font-size: var(--font-lg);
     margin-bottom: var(--space-15);
 }
 
-.practice-intro h3 {
-    font-size: var(--heading-h3);
-    font-weight: var(--weight-light);
-    margin-bottom: var(--space-1);
+.practice-title {
+    font-size: var(--text-h3);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-snug);
+    color: var(--color-heading);
+    margin-bottom: var(--space-3xs);
 }
 
 .practice-intro p {
@@ -1229,10 +1312,8 @@ font-size: var(--font-lg);
     margin-bottom: var(--space-5);
 }
 
-.practice-heading h3 {
-    font-size: var(--heading-h3);
-    font-weight: var(--weight-regular);
-    margin-bottom: var(--space-4);
+.practice-heading h1 {
+    margin-bottom: var(--space-xs);
 }
 
 .practice-description {
@@ -1307,9 +1388,7 @@ font-size: var(--font-lg);
 }
 
 .breathing-settings h2 {
-    font-size: var(--font-xl);
-    font-weight: var(--weight-regular);
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-lg);
 }
 
 .setting-group {
@@ -1545,14 +1624,6 @@ nav.scrolled .dropbtn {
 
     .practice-intro {
         margin-bottom: var(--space-13);
-    }
-
-    .practice-intro h3 {
-        font-size: var(--heading-sm);
-    }
-
-    .practice-heading h1 {
-        font-size: 27px;
     }
 
     .breathing-square {
