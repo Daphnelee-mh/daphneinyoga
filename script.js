@@ -1,12 +1,7 @@
-// ----- Determine page location -----
-
-const isPost = window.location.pathname.includes("/posts/");
-const basePath = isPost ? "../" : "";
-
-
 // ----- Header -----
+// Root-relative paths work from any folder (posts/, practices/, ...)
 
-fetch(basePath + "/header.html")
+fetch("/header.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
@@ -130,7 +125,7 @@ function goToChapter(tabId) {
 
 // ----- Footer -----
 
-fetch(basePath + "footer.html")
+fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("footer").innerHTML = data;
@@ -140,14 +135,3 @@ fetch(basePath + "footer.html")
             FontAwesome.dom.i2svg();
         }
     });
-
-/* Book shelf arrows (home page) */
-function scrollShelf(direction) {
-    const shelf = document.getElementById("bookShelf");
-    if (!shelf) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    shelf.scrollBy({
-        left: direction * shelf.clientWidth * 0.8,
-        behavior: reduce ? "auto" : "smooth"
-    });
-}

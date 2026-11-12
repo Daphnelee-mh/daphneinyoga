@@ -45,38 +45,95 @@
       yoga is the practice of observing their movements with awareness,<br>
       rather than becoming identified with them.</em></p>
   </section>
-  <!-----Books----->
-  <section class="reading">
-    <h2 id="reading"><a href="reading.html">Art of Seeing / The Reading Space</a></h2>
-    <div class="shelf">
-      <button class="shelf-btn prev" type="button" aria-label="Previous books" onclick="scrollShelf(-1)">&larr;</button>
-      <div class="row" id="bookShelf" tabindex="0" aria-label="Books on the reading list">
-        <div class="reading-col">
-          <a href="reading.html" class="book-cover">
-            <img src="assets/images/theyogasutrasofpatanjali.jpg" alt="The Yoga Sutras of Patanjali">
-          </a>
-          <p class="book-title">The Yoga Sutras of Patanjali</p>
-        </div>
-        <div class="reading-col">
-          <a href="reading.html" class="book-cover">
-            <img src="assets/images/theyamasandniyamas.jpg" alt="The Yamas &amp; Niyamas">
-          </a>
-          <p class="book-title">The Yamas &amp; Niyamas</p>
-        </div>
-        <div class="reading-col">
-          <a href="reading.html" class="book-cover">
-            <img src="assets/images/insidetheyogasutras.jpg" alt="Inside the Yoga Sutras">
-          </a>
-          <p class="book-title">Inside the Yoga Sutras</p>
-        </div>
-        <div class="reading-col">
-          <a href="reading.html" class="book-cover">
-            <img src="assets/images/thebhagavadgita.jpg" alt="The Bhagavad Gita">
-          </a>
-          <p class="book-title">The Bhagavad Gita</p>
-        </div>
+  <!-----Reading----->
+  <section class="space" id="reading">
+    <div class="space-inner">
+      <div class="space-head">
+        <p class="space-kicker">Art of Seeing</p>
+        <h2><a href="reading.html">The Reading Space</a></h2>
+        <p>If it echoes, maybe it&rsquo;s worth picking up the book.</p>
       </div>
-      <button class="shelf-btn next" type="button" aria-label="Next books" onclick="scrollShelf(1)">&rarr;</button>
+      <div class="book-grid">
+        <a class="book" href="reading.html#theyogasutrasofpatanjali">
+          <span class="book-cover"><img src="assets/images/theyogasutrasofpatanjali.jpg" alt="The Yoga Sutras of Patanjali"></span>
+          <p class="book-title">The Yoga Sutras of Patanjali</p>
+          <p class="book-by">Sri Swami Satchidananda</p>
+        </a>
+        <a class="book" href="reading.html#theyamasandniyamas">
+          <span class="book-cover"><img src="assets/images/theyamasandniyamas.jpg" alt="The Yamas &amp; Niyamas"></span>
+          <p class="book-title">The Yamas &amp; Niyamas</p>
+          <p class="book-by">Deborah Adele</p>
+        </a>
+        <a class="book" href="reading.html#insidetheyogasutras">
+          <span class="book-cover"><img src="assets/images/insidetheyogasutras.jpg" alt="Inside the Yoga Sutras"></span>
+          <p class="book-title">Inside the Yoga Sutras</p>
+          <p class="book-by">Rev. Jaganath Carrera</p>
+        </a>
+        <a class="book" href="posts/bhagavad-gita.html">
+          <span class="book-cover"><img src="assets/images/thebhagavadgita.jpg" alt="The Bhagavad Gita"></span>
+          <p class="book-title">The Bhagavad Gita</p>
+          <p class="book-by">Reading it together on the blog</p>
+        </a>
+      </div>
+      <p class="space-more"><a href="reading.html">Browse the reading space &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-----Blog----->
+  <section class="space space-alt" id="writing">
+    <div class="space-inner">
+      <div class="space-head">
+        <p class="space-kicker">Art of Weaving</p>
+        <h2><a href="blog.html">The Sharing Space</a></h2>
+        <p>Where observations find their way into words.</p>
+      </div>
+      <div class="card-grid">
+        <a class="space-card" href="posts/bhagavad-gita.html">
+          <p class="card-meta">Ongoing</p>
+          <h3>Bhagavad Gita: A Journey from Confusion to Clarity</h3>
+          <p>Exploring the Inner Battlefield and the Path of Wisdom: Self, Duty, and Conscious Action.</p>
+          <span class="card-link">Read the series &rarr;</span>
+        </a>
+        <a class="space-card" href="posts/vipassana.html">
+          <p class="card-meta">October 2026</p>
+          <h3>Ten Days of Silence: My Vipassana Experience</h3>
+          <p>Ten days of silence, stillness, and turning inward. Learning to see things as they really are.</p>
+          <span class="card-link">Read &rarr;</span>
+        </a>
+        <a class="space-card" href="posts/abhyasa-vairagya.html">
+          <p class="card-meta">September 2026</p>
+          <h3>Abhyasa (Practice) &amp; Vairagya (Non-attachment): The Ease in Effort</h3>
+          <p>Care enough to act wholeheartedly, choosing the direction without forcing outcomes.</p>
+          <span class="card-link">Read &rarr;</span>
+        </a>
+      </div>
+      <p class="space-more"><a href="blog.html">Read all posts &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-----Practice----->
+  <section class="space" id="practice">
+    <div class="space-inner">
+      <div class="space-head">
+        <p class="space-kicker">Art of Practice</p>
+        <h2><a href="practice.html">The Practice Space</a></h2>
+        <p>Move, breathe and reconnect, one practice at a time.</p>
+      </div>
+      <div class="card-grid">
+        <a class="space-card" href="practices/box-breathing.html">
+          <p class="card-meta">Breathing practice</p>
+          <h3>Box Breathing</h3>
+          <p>An equal rhythm of breathing in, holding, breathing out and holding again, creating a steady, balanced flow.</p>
+          <span class="card-link">Practice &rarr;</span>
+        </a>
+        <a class="space-card" href="practices/437-breathing.html">
+          <p class="card-meta">Breathing practice</p>
+          <h3>4-3-7 Breathing</h3>
+          <p>Breathe in for four, pause for three, and breathe out for seven.</p>
+          <span class="card-link">Practice &rarr;</span>
+        </a>
+      </div>
+      <p class="space-more"><a href="practice.html">All practices &rarr;</a></p>
     </div>
   </section>
 
