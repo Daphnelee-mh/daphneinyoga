@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>daphneinyoga | Practice</title>
+
+    <!-- Shared Stylesheet and Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f83bac2574.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Welcome Modal -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-message">
+
+            <h2>Nothing more than a breath.</h2>
+
+            <p>One breath at a time.</p>
+
+            <span>Simply, be here.</span>
+
+            <button id="beginPractice">Begin breathing</button>
+
+        </div>
+    </div>
+
+    <!-- Shared Header -->
+    <div id="header"></div>
+
+    <main class="practice-container">
+
+        <!-- Page Introduction -->
+        <section class="practice-intro">
+
+            <p class="practice-title">Practice</p>
+
+            <p><em>in the present.</em></p>
+
+        </section>
+
+        <!-- Box Breathing Introduction -->
+        <section class="practice-heading">
+
+            <p class="practice-label">Breathing Practice</p>
+
+            <h1>Box Breathing</h1>
+
+            <p class="practice-description">
+                A simple breathing practice with four equal phases:
+                inhale, hold, exhale and hold.
+                Follow the square and move at your own pace.
+            </p>
+
+        </section>
+
+        <!-- Breathing Animation -->
+        <section class="breathing-area">
+
+            <div class="breathing-square">
+
+                <div class="breathing-dot"></div>
+
+                <div class="breathing-flower"></div>
+
+            </div>
+
+            <p class="breathing-phase">
+                Ready when you are
+            </p>
+
+            <!-- Sound -->
+            <div class="setting-group">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        id="soundToggle">
+
+                    Sound cues
+                </label>
+
+            </div>
+
+            <p class="breathing-countdown"></p>
+
+        </section>
+
+        <!-- Breathing Controls -->
+        <section class="breathing-controls">
+
+            <button
+                type="button"
+                id="startButton"
+                class="primary">
+                Start
+            </button>
+
+            <button
+                type="button"
+                id="pauseButton"
+                disabled>
+                Pause
+            </button>
+
+            <button
+                type="button"
+                id="restartButton">
+                Restart
+            </button>
+
+        </section>
+
+        <!-- Practice Settings -->
+        <section class="breathing-settings">
+
+            <h2>Practice settings</h2>
+
+            <!-- Duration -->
+            <div class="setting-group">
+
+                <label for="phaseDuration">
+                    Duration per phase:
+                    <span class="setting-value">
+                        <span id="durationValue">4</span> seconds
+                    </span>
+                </label>
+
+                <input
+                    type="range"
+                    id="phaseDuration"
+                    min="2"
+                    max="10"
+                    value="4"
+                    step="1">
+
+            </div>
+
+            <!-- Practice Mode -->
+            <div class="setting-group">
+
+                <label>Practice by:</label>
+
+                <div class="setting-options">
+
+                    <button
+                        type="button"
+                        id="roundsMode"
+                        class="active">
+                        Rounds
+                    </button>
+
+                    <button
+                        type="button"
+                        id="timeMode">
+                        Duration
+                    </button>
+
+                </div>
+
+                <!-- Rounds Settings -->
+                <div id="roundsSettings">
+
+                    <label for="rounds">
+                        Number of rounds:
+                        <span class="setting-value" id="roundsValue">
+                            5
+                        </span>
+                    </label>
+
+                    <input
+                        type="range"
+                        id="rounds"
+                        min="1"
+                        max="20"
+                        value="5"
+                        step="1">
+
+                </div>
+
+                <!-- Time Settings -->
+                <div id="timeSettings" hidden>
+
+                    <label for="practiceTime">
+                        Practice duration:
+                        <span class="setting-value">
+                            <span id="timeValue">5</span> minutes
+                        </span>
+                    </label>
+
+                    <input
+                        type="range"
+                        id="practiceTime"
+                        min="1"
+                        max="30"
+                        value="5"
+                        step="1">
+
+                </div>
+
+            </div>
+
+            <!-- Progress -->
+            <p class="breathing-progress">
+                Your practice will begin when you're ready.
+            </p>
+
+        </section>
+
+        <!-- Reminder -->
+        <section class="breathing-reminder">
+
+            <p>
+                Breathe comfortably and gently.
+                You can return to natural breathing or stop
+                whenever you feel uncomfortable.
+                There is no need to force or extend your breath.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Shared Footer -->
+    <div id="footer"></div>
+
+    <!-- Shared Website JavaScript -->
+    <script src="../script.js"></script>
+
+    <!-- Box Breathing JavaScript -->
+    <script src="box-breathing.js"></script>
+
+</body>
+</html>
