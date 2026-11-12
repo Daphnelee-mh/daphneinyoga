@@ -48,28 +48,36 @@
   <!-----Books----->
   <section class="reading">
     <h2 id="reading"><a href="reading.html">Art of Seeing / The Reading Space</a></h2>
-      <div class="row">
+    <div class="shelf">
+      <button class="shelf-btn prev" type="button" aria-label="Previous books" onclick="scrollShelf(-1)">&larr;</button>
+      <div class="row" id="bookShelf" tabindex="0" aria-label="Books on the reading list">
         <div class="reading-col">
-          <a href="reading.html">
+          <a href="reading.html" class="book-cover">
             <img src="assets/images/theyogasutrasofpatanjali.jpg" alt="The Yoga Sutras of Patanjali">
           </a>
+          <p class="book-title">The Yoga Sutras of Patanjali</p>
         </div>
         <div class="reading-col">
-          <a href="reading.html">
+          <a href="reading.html" class="book-cover">
             <img src="assets/images/theyamasandniyamas.jpg" alt="The Yamas &amp; Niyamas">
           </a>
+          <p class="book-title">The Yamas &amp; Niyamas</p>
         </div>
         <div class="reading-col">
-          <a href="reading.html">
+          <a href="reading.html" class="book-cover">
             <img src="assets/images/insidetheyogasutras.jpg" alt="Inside the Yoga Sutras">
           </a>
+          <p class="book-title">Inside the Yoga Sutras</p>
         </div>
         <div class="reading-col">
-          <a href="reading.html">
+          <a href="reading.html" class="book-cover">
             <img src="assets/images/thebhagavadgita.jpg" alt="The Bhagavad Gita">
           </a>
+          <p class="book-title">The Bhagavad Gita</p>
         </div>
       </div>
+      <button class="shelf-btn next" type="button" aria-label="Next books" onclick="scrollShelf(1)">&rarr;</button>
+    </div>
   </section>
 
     <!-----Javascript for Footer & Navigation----->

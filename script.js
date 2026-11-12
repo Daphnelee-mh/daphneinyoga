@@ -140,3 +140,14 @@ fetch(basePath + "footer.html")
             FontAwesome.dom.i2svg();
         }
     });
+
+/* Book shelf arrows (home page) */
+function scrollShelf(direction) {
+    const shelf = document.getElementById("bookShelf");
+    if (!shelf) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    shelf.scrollBy({
+        left: direction * shelf.clientWidth * 0.8,
+        behavior: reduce ? "auto" : "smooth"
+    });
+}
