@@ -1,3 +1,15 @@
+// ----- Welcome Modal -----
+
+const welcomeOverlay = document.getElementById("welcomeOverlay");
+const beginPractice = document.getElementById("beginPractice");
+
+if (welcomeOverlay && beginPractice) {
+    beginPractice.addEventListener("click", () => {
+        welcomeOverlay.classList.add("hide");
+    });
+}
+
+// ----- 4-3-7 Breathing -----
 
 document.addEventListener("DOMContentLoaded", () => {
 
