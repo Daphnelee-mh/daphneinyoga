@@ -841,7 +841,7 @@ color: #6b705c;
 }
 
 .quote-reference {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   letter-spacing: 0.05em;
 }
 
