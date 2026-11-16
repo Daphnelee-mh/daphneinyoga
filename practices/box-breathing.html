@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>daphneinyoga | Practice</title>
+    <title>Box Breathing | daphneinyoga</title>
+    <meta name="description" content="A guided box breathing practice: inhale, hold, exhale and hold in equal counts while following a moving square.">
+    <link rel="canonical" href="https://daphneinyoga.com/practices/box-breathing.html">
 
-    <!-- Shared Stylesheet and Favicon -->
+    <!-- Link previews -->
+    <meta property="og:site_name" content="daphneinyoga">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Box Breathing | daphneinyoga">
+    <meta property="og:description" content="A guided box breathing practice: inhale, hold, exhale and hold in equal counts while following a moving square.">
+    <meta property="og:url" content="https://daphneinyoga.com/practices/box-breathing.html">
+    <meta property="og:image" content="https://daphneinyoga.com/assets/images/logo.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="icon" type="image/png" href="/assets/images/logo.png">
-    <link rel="stylesheet" type="text/css" href="/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/f83bac2574.js"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
+<body class="no-hero">
 
     <!-- Welcome Modal -->
-    <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
         <div class="welcome-message">
 
-            <h2>Nothing more than a breath.</h2>
+            <h2 id="welcomeTitle">Nothing more than a breath.</h2>
 
             <p>One breath at a time.</p>
 
             <span>Simply, be here.</span>
 
-            <button id="beginPractice">Begin breathing</button>
+            <button type="button" id="beginPractice">Begin breathing</button>
 
         </div>
     </div>
@@ -76,7 +84,7 @@
 
             </div>
 
-            <p class="breathing-phase">
+            <p class="breathing-phase" aria-live="polite">
                 Ready when you are
             </p>
 
@@ -157,13 +165,15 @@
                     <button
                         type="button"
                         id="roundsMode"
-                        class="active">
+                        class="active"
+                        aria-pressed="true">
                         Rounds
                     </button>
 
                     <button
                         type="button"
-                        id="timeMode">
+                        id="timeMode"
+                        aria-pressed="false">
                         Duration
                     </button>
 
@@ -239,6 +249,7 @@
     <script src="/script.js"></script>
 
     <!-- Box Breathing JavaScript -->
+    <script src="/practices/breathing-engine.js"></script>
     <script src="/practices/box-breathing.js"></script>
 
 </body>
