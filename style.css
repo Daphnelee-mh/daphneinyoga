@@ -851,7 +851,7 @@ color: #6b705c;
 }
 
 .quote-translation {
-  font-size: var(--font-base);
+  font-size: var(--font-lg);
   line-height: var(--line-normal);
 }
 /* Tab Function */
