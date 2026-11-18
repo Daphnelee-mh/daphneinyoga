@@ -1667,3 +1667,19 @@ nav.scrolled .dropbtn {
 .not-found a {
     color: var(--color-heading);
 }
+
+
+/* =================================
+   GOLDEN CIRCLE (Why, What, How post)
+================================= */
+
+.golden-circle {
+    max-width: 520px;
+    margin-inline: auto;
+}
+
+.golden-circle svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}

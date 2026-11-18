@@ -44,6 +44,86 @@
 
         <h1>Why, What, How: The Starting Point of Everything</h1>
 
+        <!-- Golden circle: Why at the centre, then How, then What -->
+        <figure class="golden-circle">
+<svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="gc-title gc-desc">
+  <title id="gc-title">The golden circle: Why, How, What</title>
+  <desc id="gc-desc">Three circles, one inside another. Why (disruption) is at the centre, How (direction) surrounds it, and What (reflection) is the outer circle.</desc>
+
+  <defs>
+    <!-- Soft golden glow behind everything -->
+    <radialGradient id="gc-aura">
+      <stop offset="0%" stop-color="#FCE8B0" stop-opacity=".8"/>
+      <stop offset="55%" stop-color="#D5A65D" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#D5A65D" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- What: pale outer ring -->
+    <radialGradient id="gc-what">
+      <stop offset="0%" stop-color="#FCE8B0" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#FFF4D5" stop-opacity=".55"/>
+    </radialGradient>
+
+    <!-- How: light, almost white -->
+    <radialGradient id="gc-how">
+      <stop offset="0%" stop-color="#FFF4D5"/>
+      <stop offset="100%" stop-color="#FFFBF0"/>
+    </radialGradient>
+
+    <!-- Why: warm golden core -->
+    <radialGradient id="gc-why">
+      <stop offset="0%" stop-color="#D5A65D"/>
+      <stop offset="60%" stop-color="#FCE8B0"/>
+      <stop offset="100%" stop-color="#FFF4D5"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer aura -->
+  <circle cx="160" cy="160" r="160" fill="url(#gc-aura)">
+    <animate attributeName="r" values="150;175;150" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Expanding light ring -->
+  <circle cx="160" cy="160" r="60" fill="none" stroke="#D5B77F" opacity=".3">
+    <animate attributeName="r" values="55;150;55" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".35;0;.35" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- What / How / Why -->
+  <circle cx="160" cy="160" r="150" fill="url(#gc-what)" stroke="#D5B77F" stroke-opacity=".5"/>
+  <circle cx="160" cy="160" r="100" fill="url(#gc-how)" stroke="#D5B77F" stroke-opacity=".6"/>
+  <circle cx="160" cy="160" r="50" fill="url(#gc-why)">
+    <animate attributeName="r" values="48;53;48" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Leader lines: centre, edge of Why, edge of How -->
+  <g stroke="#9B8065" stroke-opacity=".7" stroke-width="1">
+    <line x1="160" y1="160" x2="415" y2="160"/>
+    <line x1="160" y1="210" x2="415" y2="210"/>
+    <line x1="160" y1="260" x2="415" y2="260"/>
+  </g>
+  <g fill="#6E5A45">
+    <circle cx="160" cy="160" r="3"/>
+    <circle cx="160" cy="210" r="3"/>
+    <circle cx="160" cy="260" r="3"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="inherit">
+    <g fill="#3D3328" font-size="19" letter-spacing="2.5">
+      <text x="322" y="183">WHY</text>
+      <text x="322" y="233">HOW</text>
+      <text x="322" y="283">WHAT</text>
+    </g>
+    <g fill="#8A7055" font-size="12" font-style="italic">
+      <text x="322" y="199">Disruption</text>
+      <text x="322" y="249">Direction</text>
+      <text x="322" y="299">Reflection</text>
+    </g>
+  </g>
+</svg>
+        </figure>
+
         <p class="subtitle">
             The moment we begin to ask “Why?”, “What?”, and “How?”, curiosity is sparked, and a single idea can unfold into limitless possibilities. 
           But when we stop questioning, we can become blind to the obvious and, more dangerously, blind to our own blindness.
