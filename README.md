@@ -19,8 +19,7 @@ assets/images/              images (keep photos under ~300 KB)
 sitemap.xml, robots.txt     for search engines
 ```
 
-The root-level `*.html` files named after posts (e.g. `vipassana.html`) are
-redirects to `posts/`, kept so older links still work.
+All blog posts live in `posts/` only; keep the root for the main pages.
 
 ## Adding a blog post
 
