@@ -1203,6 +1203,15 @@ nav a:focus-visible,
   padding-top:0;
 }
 
+.content-col a {
+    color: var(--color-heading);
+    text-underline-offset: 3px;
+}
+
+.content-col a:hover {
+    opacity: 0.65;
+}
+
 .book-author {
     font-size: var(--text-base);
     color: var(--color-text);
