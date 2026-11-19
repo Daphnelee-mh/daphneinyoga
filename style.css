@@ -989,7 +989,7 @@ nav a:focus-visible,
     cursor: pointer;
     list-style: none;
 
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     font-weight: var(--weight-semibold);
     line-height: var(--leading-body);
     color: var(--color-heading);
@@ -1035,9 +1035,29 @@ nav a:focus-visible,
 
 .content-toggle-content p {
     margin: var(--space-sm) 0;
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     line-height: var(--leading-body);
     color: var(--color-text);
+}
+
+/* Lists inside toggles and reflection boxes: same size as paragraphs,
+   with a small, even gap (overrides the wide .blog-post li spacing) */
+.content-toggle-content :is(ul, ol),
+.reflection-box :is(ul, ol) {
+    margin: var(--space-sm) 0;
+    padding-left: 1.5rem;
+}
+
+.content-toggle-content li,
+.reflection-box li {
+    margin-bottom: 0;
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+}
+
+.content-toggle-content li + li,
+.reflection-box li + li {
+    margin-top: var(--space-2xs);
 }
 
 /* =================================
