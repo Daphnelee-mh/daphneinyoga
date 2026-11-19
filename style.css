@@ -1190,6 +1190,22 @@ nav a:focus-visible,
   padding-bottom:0;
 }
 
+/* Book cover vertically centred on its review (side-by-side layout only) */
+@media (min-width: 701px){
+  .row-centered{
+    align-items:center;
+  }
+
+  .row-centered .content-col:last-child > br:first-child,
+  .row-centered .content-col:last-child > br:last-child{
+    display:none;
+  }
+
+  .row-centered .content-col:last-child > h2{
+    margin-top:0;
+  }
+}
+
 .content-col{
   flex-basis:48%;
   padding: var(--space-lg) 2px;
