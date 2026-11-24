@@ -636,7 +636,7 @@ nav a:focus-visible,
 
 /* Widths for each drawing, in the order they appear in footer.html */
 .footer-art .art:nth-child(1){ width:14%; }  /* seated */
-.footer-art .art:nth-child(2){ width:10%; }  /* forward fold */
+.footer-art .art:nth-child(2){ width:8.5%; } /* forward fold */
 .footer-art .art:nth-child(3){ width:17%; }  /* high lunge */
 .footer-art .art:nth-child(4){ width:20%; }  /* plough */
 .footer-art .art:nth-child(5){ width:24%; }  /* child's pose */
