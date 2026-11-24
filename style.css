@@ -600,7 +600,7 @@ nav a:focus-visible,
 .footer{
   width:100%;
   text-align:center;
-  padding:var(--space-xl) var(--space-md) var(--space-lg);
+  padding:var(--space-md) var(--space-md) var(--space-sm);
   background-color:var(--color-bg-alt);
   position:relative;
   overflow:hidden;
@@ -622,7 +622,7 @@ nav a:focus-visible,
   display:flex;
   justify-content:space-between;
   align-items:center;
-  max-width:1800px;
+  max-width:1500px;
   margin-inline:auto;
   padding-inline:1%;
   pointer-events:none;
@@ -631,6 +631,8 @@ nav a:focus-visible,
 .footer-art .art{
   display:block;
   height:auto;
+  max-height:100%;   /* never taller than the footer */
+  object-fit:contain;
   opacity:0.5;
 }
 
@@ -654,15 +656,16 @@ nav a:focus-visible,
 
 .footer-logo{
   display:block;
-  width:56px;
-  height:56px;
-  margin:0 auto var(--space-xs);
+  width:44px;
+  height:44px;
+  margin:0 auto var(--space-2xs);
   border-radius:50%;
 }
 
 .footer .footer-tagline{
-  max-width:32ch;
+  max-width:52ch;
   margin-inline:auto;
+  text-wrap:balance; /* evens out the two lines */
   font-size:var(--text-sm);
   line-height:var(--leading-snug);
 }
@@ -670,6 +673,19 @@ nav a:focus-visible,
 .footer .footer-copy{
   font-size:var(--text-xs);
   line-height:var(--leading-snug);
+}
+
+/* Desktop and tablet: copyright sits in the bottom-left corner */
+@media (min-width: 601px){
+  .footer .footer-copy{
+    position:absolute;
+    left:var(--space-md);
+    bottom:var(--space-sm);
+  }
+
+  .footer .icons{
+    margin-block:var(--space-2xs) 0;
+  }
 }
 
 .icons{
