@@ -675,21 +675,6 @@ nav a:focus-visible,
   line-height:var(--leading-snug);
 }
 
-/* Desktop and tablet: copyright sits in the bottom-left corner */
-@media (min-width: 601px){
-  .footer .footer-copy{
-    position:absolute;
-    left:var(--space-md);
-    /* Line up its centre with the centre of the social icons row:
-       footer bottom padding + half the icon row height - half this line's height */
-    bottom:calc(var(--space-sm) + (1.25rem + 2 * var(--space-3xs)) / 2 - (var(--leading-snug) * 1em) / 2);
-  }
-
-  .footer .icons{
-    margin-block:var(--space-2xs) 0;
-  }
-}
-
 .icons{
   display:flex;
   justify-content:center;
