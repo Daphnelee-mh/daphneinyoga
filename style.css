@@ -600,14 +600,83 @@ nav a:focus-visible,
 .footer{
   width:100%;
   text-align:center;
-  padding:var(--space-lg) 0;
+  padding:var(--space-xl) var(--space-md) var(--space-lg);
+  background-color:var(--color-bg-alt);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Footer content sits above the decorative artwork */
+.footer > :not(.footer-art){
+  position:relative;
+  z-index:1;
+}
+
+/* Decorative line drawings: one row across the whole footer, behind the content */
+.footer-art{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-6%;
+  right:-6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1800px;
+  margin-inline:auto;
+  padding-inline:1%;
+  pointer-events:none;
+}
+
+.footer-art .art{
+  display:block;
+  height:auto;
+  opacity:0.5;
+}
+
+/* Widths for each drawing, in the order they appear in footer.html */
+.footer-art .art:nth-child(1){ width:14%; }  /* seated */
+.footer-art .art:nth-child(2){ width:10%; }  /* forward fold */
+.footer-art .art:nth-child(3){ width:17%; }  /* high lunge */
+.footer-art .art:nth-child(4){ width:20%; }  /* plough */
+.footer-art .art:nth-child(5){ width:24%; }  /* child's pose */
+
+/* Mirror a drawing so it faces inward */
+.footer-art .art-flip{ transform:scaleX(-1); }
+
+/* Phone: widen the row so the drawings stay large and run off both edges */
+@media (max-width: 600px){
+  .footer-art{
+    left:-75%;
+    right:-75%;
+  }
+}
+
+.footer-logo{
+  display:block;
+  width:56px;
+  height:56px;
+  margin:0 auto var(--space-xs);
+  border-radius:50%;
+}
+
+.footer .footer-tagline{
+  max-width:32ch;
+  margin-inline:auto;
+  font-size:var(--text-sm);
+  line-height:var(--leading-snug);
+}
+
+.footer .footer-copy{
+  font-size:var(--text-xs);
+  line-height:var(--leading-snug);
 }
 
 .icons{
   display:flex;
   justify-content:center;
   gap:var(--space-sm);
-  margin-block:var(--space-sm);
+  margin-block:var(--space-xs);
 }
 
 .icons a{
