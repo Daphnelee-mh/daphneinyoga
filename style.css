@@ -680,7 +680,9 @@ nav a:focus-visible,
   .footer .footer-copy{
     position:absolute;
     left:var(--space-md);
-    bottom:var(--space-sm);
+    /* Line up its centre with the centre of the social icons row:
+       footer bottom padding + half the icon row height - half this line's height */
+    bottom:calc(var(--space-sm) + (1.25rem + 2 * var(--space-3xs)) / 2 - (var(--leading-snug) * 1em) / 2);
   }
 
   .footer .icons{
